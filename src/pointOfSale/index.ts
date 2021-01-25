@@ -12,3 +12,6 @@ export * as stockUnitResponseTypes from './StockUnit/stockUnit.response.types';
 
 export * as saleRequestTypes from './Sale/sale.request.types';
 export * as saleResponseTypes from './Sale/sale.response.types';
+
+export * as productRequestTypes from './Product/product.request.types';
+export * as productResponseTypes from './Product/product.response.types';
