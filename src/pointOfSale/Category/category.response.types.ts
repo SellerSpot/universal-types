@@ -1,5 +1,5 @@
 import { tenantDbModels } from '@sellerspot/database-models';
-import { IResponse } from 'utils';
+import { IResponse } from '../../utils';
 
 // field names for textFields involved in this API
 type fieldNames = 'name';

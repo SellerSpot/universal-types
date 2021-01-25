@@ -1,5 +1,5 @@
 import { tenantDbModels } from '@sellerspot/database-models';
-import { IResponse } from 'utils';
+import { IResponse } from '../../utils';
 
 /**
  * Response when a sale is fetched from server
