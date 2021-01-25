@@ -1,7 +1,5 @@
+import { tenantDbModels } from '@sellerspot/database-models';
 /**
  * Response when brand is fetched from server
  */
-export interface IGetBrand {
-    _id: string;
-    name: string;
-}
+export type IGetBrand = tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema;

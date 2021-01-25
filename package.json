@@ -55,5 +55,8 @@
         "webpack-cli": "^4.2.0",
         "webpack-node-externals": "^2.5.2",
         "webpack-shell-plugin-next": "^2.0.8"
+    },
+    "dependencies": {
+        "@sellerspot/database-models": "^1.3.0"
     }
 }

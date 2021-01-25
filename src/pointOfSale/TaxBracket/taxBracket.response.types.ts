@@ -1,8 +1,6 @@
+import { tenantDbModels } from '@sellerspot/database-models';
+
 /**
  * Response when taxBracket is fetched from server
  */
-export interface IGetTaxBracket {
-    _id: string;
-    name: string;
-    percent: number;
-}
+export type IGetTaxBracket = tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;

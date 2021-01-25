@@ -1,10 +1,12 @@
+import { tenantDbModels } from '@sellerspot/database-models';
+
 /**
  * Request to create new tax bracket
  */
-export interface ICreateTaxBracket {
-    name: string;
-    percent: number;
-}
+export type ICreateTaxBracket = Pick<
+    tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema,
+    '_id' | 'createdAt' | 'updatedAt'
+>;
 
 /**
  * Request to delete a tax bracket

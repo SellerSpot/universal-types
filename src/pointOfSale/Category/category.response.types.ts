@@ -1,7 +1,6 @@
+import { tenantDbModels } from '@sellerspot/database-models';
+
 /**
  * Response when category is fetched from server
  */
-export interface IGetCategory {
-    _id: string;
-    name: string;
-}
+export type IGetCategory = tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
