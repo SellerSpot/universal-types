@@ -3,7 +3,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
 /**
  * Request to create new stock unit
  */
-export type ICreateStockUnit = Pick<
+export type ICreateStockUnit = Omit<
     tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema,
     '_id' | 'createdAt' | 'updatedAt'
 >;
