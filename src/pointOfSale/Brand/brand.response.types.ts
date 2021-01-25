@@ -1,7 +1,7 @@
 /**
  * Response when brand is fetched from server
  */
-export interface IGetBrands {
+export interface IGetBrand {
     _id: string;
     name: string;
 }
