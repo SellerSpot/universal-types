@@ -5,6 +5,14 @@ import { IResponse } from '../../utils';
 export type fieldNames = 'name' | 'id';
 
 /**
+ * Response when all brands are fetched from server
+ */
+export type IGetBrands = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema[];
+    error?: string;
+};
+
+/**
  * Response when brand is fetched from server
  */
 export type IGetBrand = IResponse & {

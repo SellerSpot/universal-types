@@ -37,6 +37,7 @@
     },
     "homepage": "https://github.com/SellerSpot/universal-types#readme",
     "devDependencies": {
+        "@sellerspot/database-models": "^1.4.1",
         "@types/webpack": "4.41.25",
         "@types/webpack-node-externals": "^2.5.0",
         "@typescript-eslint/eslint-plugin": "^4.10.0",
@@ -56,7 +57,7 @@
         "webpack-node-externals": "^2.5.2",
         "webpack-shell-plugin-next": "^2.0.8"
     },
-    "dependencies": {
-        "@sellerspot/database-models": "^1.3.0"
+    "peerDependencies": {
+        "@sellerspot/database-models": "^1.4.1"
     }
 }

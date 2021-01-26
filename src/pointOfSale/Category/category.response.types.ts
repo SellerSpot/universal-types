@@ -5,6 +5,14 @@ import { IResponse } from '../../utils';
 export type fieldNames = 'name' | 'id';
 
 /**
+ * Response when all categories are fetched from server
+ */
+export type IGetCategories = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema[];
+    error?: string;
+};
+
+/**
  * Response when category is fetched from server
  */
 export type IGetCategory = IResponse & {
