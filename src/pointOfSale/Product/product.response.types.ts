@@ -2,10 +2,10 @@ import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utils';
 
 // field names for textFields involved in this API
-type fieldNames =
+export type fieldNames =
     | 'name'
     | 'category'
-    | 'brand'
+    | 'product'
     | 'gtinNumber'
     | 'mrpPrice'
     | 'landingPrice'
@@ -16,7 +16,15 @@ type fieldNames =
     | 'taxBracket';
 
 /**
- * Response when a product is fetched from server
+ * Response when all products are fetched from server
+ */
+export type IGetProducts = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
+    error?: string;
+};
+
+/**
+ * Response when product is fetched from server
  */
 export type IGetProduct = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
@@ -29,8 +37,20 @@ export type IGetProduct = IResponse & {
 export type ICreateProduct = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
     error?: {
-        [k in fieldNames]?: string;
-    };
+        name: fieldNames;
+        message: string;
+    }[];
+};
+
+/**
+ * Respose when a product is updated
+ */
+export type IUpdateProduct = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
+    error?: {
+        name: fieldNames;
+        message: string;
+    }[];
 };
 
 /**
