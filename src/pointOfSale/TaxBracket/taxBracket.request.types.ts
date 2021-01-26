@@ -1,7 +1,13 @@
 import { tenantDbModels } from '@sellerspot/database-models';
+/**
+ * Request to get a single taxBracket from server
+ */
+export interface IGetSingleTaxBracket {
+    id: string;
+}
 
 /**
- * Request to create new tax bracket
+ * Request to create new taxBracket
  */
 export type ICreateTaxBracket = Omit<
     tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema,
@@ -9,7 +15,15 @@ export type ICreateTaxBracket = Omit<
 >;
 
 /**
- * Request to delete a tax bracket
+ * Request to update a taxBracket data
+ */
+export interface IUpdateTaxBracket {
+    id: string;
+    taxBracketData: ICreateTaxBracket;
+}
+
+/**
+ * Request to delete a taxBracket
  */
 export interface IDeleteTaxBracket {
     id: string;

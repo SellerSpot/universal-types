@@ -2,10 +2,18 @@ import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utils';
 
 // field names for textFields involved in this API
-type fieldNames = 'name' | 'taxPercent';
+export type fieldNames = 'name' | 'id';
 
 /**
- * Response when a taxBracket is fetched from server
+ * Response when all taxBrackets are fetched from server
+ */
+export type IGetTaxBrackets = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema[];
+    error?: string;
+};
+
+/**
+ * Response when taxBracket is fetched from server
  */
 export type IGetTaxBracket = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;
@@ -18,8 +26,20 @@ export type IGetTaxBracket = IResponse & {
 export type ICreateTaxBracket = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;
     error?: {
-        [k in fieldNames]?: string;
-    };
+        name: fieldNames;
+        message: string;
+    }[];
+};
+
+/**
+ * Respose when a taxBracket is updated
+ */
+export type IUpdateTaxBracket = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;
+    error?: {
+        name: fieldNames;
+        message: string;
+    }[];
 };
 
 /**
