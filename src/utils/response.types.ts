@@ -21,13 +21,13 @@ export enum STATUS_CODES {
      */
     OK = 200,
     /**
-     * for denoting that the required resource has not been found in database
-     */
-    NOT_FOUND = 404,
-    /**
      * for denoting that no content is being sent in the response
      */
     NO_CONTENT = 204,
+    /**
+     * for denoting that the required resource has not been found in database
+     */
+    NOT_FOUND = 404,
 }
 
 /**

@@ -2,12 +2,11 @@ import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utils';
 
 // field names for textFields involved in this API
-type fieldNames = 'name';
+export type fieldNames = 'name' | 'id';
 
 /**
  * Response when brand is fetched from server
  */
-
 export type IGetBrand = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema;
     error?: string;
@@ -19,8 +18,20 @@ export type IGetBrand = IResponse & {
 export type ICreateBrand = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema;
     error?: {
-        [k in fieldNames]?: string;
-    };
+        name: fieldNames;
+        message: string;
+    }[];
+};
+
+/**
+ * Respose when a brand is updated
+ */
+export type IUpdateBrand = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema;
+    error?: {
+        name: fieldNames;
+        message: string;
+    }[];
 };
 
 /**

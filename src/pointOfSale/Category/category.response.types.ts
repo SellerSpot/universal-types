@@ -2,7 +2,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utils';
 
 // field names for textFields involved in this API
-type fieldNames = 'name';
+export type fieldNames = 'name' | 'id';
 
 /**
  * Response when category is fetched from server
@@ -18,12 +18,24 @@ export type IGetCategory = IResponse & {
 export type ICreateCategory = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
     error?: {
-        [k in fieldNames]?: string;
-    };
+        name: fieldNames;
+        message: string;
+    }[];
 };
 
 /**
- * Response when a new category is created
+ * Respose when a category is updated
+ */
+export type IUpdateCategory = IResponse & {
+    data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
+    error?: {
+        name: fieldNames;
+        message: string;
+    }[];
+};
+
+/**
+ * Response when a category is deleted
  */
 export type IDeleteCategory = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
