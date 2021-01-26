@@ -4,7 +4,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
  */
 export type ICreateBrand = Omit<
     tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema,
-    '_id' | 'createdAt' | 'updatedAt'
+    '_id' | 'createdAt' | 'updatedAt' | '__v'
 >;
 
 /**

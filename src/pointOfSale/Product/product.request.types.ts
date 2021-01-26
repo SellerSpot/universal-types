@@ -5,7 +5,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
  */
 export type ICreateProduct = Omit<
     tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema,
-    '_id' | 'createdAt' | 'updatedAt'
+    '_id' | 'createdAt' | 'updatedAt' | '__v'
 >;
 
 /**

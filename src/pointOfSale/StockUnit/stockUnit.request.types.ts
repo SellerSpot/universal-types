@@ -5,7 +5,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
  */
 export type ICreateStockUnit = Omit<
     tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema,
-    '_id' | 'createdAt' | 'updatedAt'
+    '_id' | 'createdAt' | 'updatedAt' | '__v'
 >;
 
 /**

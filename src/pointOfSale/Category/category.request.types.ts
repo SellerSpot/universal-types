@@ -4,7 +4,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
  */
 export type ICreateCategory = Omit<
     tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema,
-    '_id' | 'createdAt' | 'updatedAt'
+    '_id' | 'createdAt' | 'updatedAt' | '__v'
 >;
 
 /**

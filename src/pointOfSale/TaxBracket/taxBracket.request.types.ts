@@ -5,7 +5,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
  */
 export type ICreateTaxBracket = Omit<
     tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema,
-    '_id' | 'createdAt' | 'updatedAt'
+    '_id' | 'createdAt' | 'updatedAt' | '__v'
 >;
 
 /**
