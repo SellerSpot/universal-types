@@ -1,17 +1,20 @@
-export * as brandRequestTypes from './Brand/brand.request.types';
-export * as brandResponseTypes from './Brand/brand.response.types';
+export * as authRequestTypes from './auth/auth.request';
+export * as authResponseTypes from './auth/auth.response';
 
-export * as categoryRequestTypes from './Category/category.request.types';
-export * as categoryResponseTypes from './Category/category.response.types';
+export * as brandRequestTypes from './brand/brand.request';
+export * as brandResponseTypes from './brand/brand.response';
 
-export * as taxBracketRequestTypes from './TaxBracket/taxBracket.request.types';
-export * as taxBracketResponseTypes from './TaxBracket/taxBracket.response.types';
+export * as categoryRequestTypes from './category/category.request';
+export * as categoryResponseTypes from './category/category.response';
 
-export * as stockUnitRequestTypes from './StockUnit/stockUnit.request.types';
-export * as stockUnitResponseTypes from './StockUnit/stockUnit.response.types';
+export * as taxBracketRequestTypes from './taxBracket/taxBracket.request';
+export * as taxBracketResponseTypes from './taxBracket/taxBracket.response';
 
-export * as saleRequestTypes from './Sale/sale.request.types';
-export * as saleResponseTypes from './Sale/sale.response.types';
+export * as stockUnitRequestTypes from './stockUnit/stockUnit.request';
+export * as stockUnitResponseTypes from './stockUnit/stockUnit.response';
 
-export * as productRequestTypes from './Product/product.request.types';
-export * as productResponseTypes from './Product/product.response.types';
+export * as saleRequestTypes from './sale/sale.request';
+export * as saleResponseTypes from './sale/sale.response';
+
+export * as productRequestTypes from './product/product.request.';
+export * as productResponseTypes from './product/product.response';
