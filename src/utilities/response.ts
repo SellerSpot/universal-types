@@ -28,6 +28,10 @@ export enum STATUS_CODES {
      * for denoting that the required resource has not been found in database
      */
     NOT_FOUND = 404,
+    /**
+     * for denoting authentication errors such as invalid tokens
+     */
+    UNAUTHORIZED = 401,
 }
 
 /**
