@@ -1,3 +1,3 @@
 export * as pointOfSaleTypes from './pointOfSale';
 
-export * from './utils';
+export * from './utilities';

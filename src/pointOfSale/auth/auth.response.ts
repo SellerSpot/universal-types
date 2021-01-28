@@ -1,4 +1,4 @@
-import { IResponse } from '../../utils';
+import { IResponse } from '../../utilities';
 
 export interface ITokenPayload {
     name: string;
