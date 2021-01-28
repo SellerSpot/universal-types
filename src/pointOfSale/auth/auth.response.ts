@@ -1,13 +1,20 @@
 import { IResponse } from '../../utils';
 
-export interface ITokenPayload {
+export interface IAuth {
     name: string;
     email: string;
     _id: string;
 }
 
+export interface ITokenPayload {
+    name: string;
+    email: string;
+    _id: string;
+    auth?: IAuth;
+}
+
 export type IAuthorizeTenantResponse = IResponse & {
-    data?: ITokenPayload & { tenantAppToken: string };
+    data?: ITokenPayload & { token: string };
     error?: string;
 };
 
