@@ -60,3 +60,14 @@ export type IDeleteProduct = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
     error?: string;
 };
+
+/**
+ * Respose for when a product is searched for
+ */
+export type ISearchProduct = IResponse & {
+    data?: {
+        queryType: 'name' | 'barcode';
+        results: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
+    };
+    error?: string;
+};

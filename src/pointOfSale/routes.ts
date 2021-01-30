@@ -30,6 +30,7 @@ export const ROUTES = {
     PRODUCT_CREATE_PRODUCT: 'createproduct',
     PRODUCT_DELETE_PRODUCT: 'deleteproduct',
     PRODUCT_UPDATE_PRODUCT: 'updateproduct',
+    PRODUCT_SEARCH_PRODUCT: 'searchproducts',
 
     // sale routes
     SALE_GET_ALL_SALES: 'getallsales',

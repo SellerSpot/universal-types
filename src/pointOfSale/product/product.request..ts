@@ -1,4 +1,5 @@
 import { tenantDbModels } from '@sellerspot/database-models';
+
 /**
  * Request to get a single product from server
  */
@@ -27,4 +28,11 @@ export interface IUpdateProduct {
  */
 export interface IDeleteProduct {
     id: string;
+}
+
+/**
+ * Request to search for product
+ */
+export interface ISearchProduct {
+    query: string;
 }
