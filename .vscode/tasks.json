@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "npm_link_database-models",
+            "type": "shell",
+            "command": "[ -d '../database-models/dist' ] && [ -d './node_modules/@sellerspot/database-models' ] && npm link ../database-models/",
+            "presentation": {
+                "group": "npm_link",
+                "focus": true,
+                "reveal": "always",
+                "panel": "new",
+                "showReuseMessage": false
+            },
+            "runOptions": {
+                "runOn": "default"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
