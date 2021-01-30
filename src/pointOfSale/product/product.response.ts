@@ -1,5 +1,5 @@
 import { tenantDbModels } from '@sellerspot/database-models';
-import { IResponse } from '../../utils';
+import { IResponse } from '../../utilities';
 
 // field names for textFields involved in this API
 export type fieldNames =
@@ -58,5 +58,16 @@ export type IUpdateProduct = IResponse & {
  */
 export type IDeleteProduct = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
+    error?: string;
+};
+
+/**
+ * Respose for when a product is searched for
+ */
+export type ISearchProduct = IResponse & {
+    data?: {
+        queryType: 'name' | 'barcode';
+        results: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
+    };
     error?: string;
 };
