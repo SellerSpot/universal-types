@@ -19,5 +19,4 @@ export * as saleResponseTypes from './sale/sale.response';
 export * as productRequestTypes from './product/product.request.';
 export * as productResponseTypes from './product/product.response';
 
-
 export * from './routes';
