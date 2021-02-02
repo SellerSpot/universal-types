@@ -1,4 +1,4 @@
-import { tenantDbModels } from '@sellerspot/database-models';
+import { ITaxBracketSchema } from 'pointOfSale/databaseModels/TaxBracket';
 import { IResponse } from '../../utilities';
 
 // field names for textFields involved in this API
@@ -8,7 +8,7 @@ export type fieldNames = 'name' | 'id' | 'taxPercent';
  * Response when all taxBrackets are fetched from server
  */
 export type IGetAllTaxBrackets = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema[];
+    data?: ITaxBracketSchema[];
     error?: string;
 };
 
@@ -16,7 +16,7 @@ export type IGetAllTaxBrackets = IResponse & {
  * Response when taxBracket is fetched from server
  */
 export type IGetTaxBracket = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;
+    data?: ITaxBracketSchema;
     error?: string;
 };
 
@@ -24,7 +24,7 @@ export type IGetTaxBracket = IResponse & {
  * Response when a new taxBracket is created
  */
 export type ICreateTaxBracket = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;
+    data?: ITaxBracketSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -35,7 +35,7 @@ export type ICreateTaxBracket = IResponse & {
  * Respose when a taxBracket is updated
  */
 export type IUpdateTaxBracket = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;
+    data?: ITaxBracketSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -46,6 +46,6 @@ export type IUpdateTaxBracket = IResponse & {
  * Response when a taxBracket is deleted
  */
 export type IDeleteTaxBracket = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema;
+    data?: ITaxBracketSchema;
     error?: string;
 };
