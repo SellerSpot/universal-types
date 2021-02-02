@@ -13,6 +13,9 @@ export interface ITokenPayload {
     auth?: IAuth;
 }
 
+/**
+ * this response will be sent for both authorize tenant and authenticate user (only differenc is auth property in the payload body differs)
+ */
 export type IAuthorizeTenantResponse = IResponse & {
     data?: ITokenPayload & { token: string };
     error?: string;

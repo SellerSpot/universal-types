@@ -2,7 +2,10 @@
  * Holds the major routes for the server
  */
 export const ROUTES = {
+    // authorization and authencation
     AUTHORIZE: 'authorize',
+    AUTHENTICATE: 'authenticate',
+
     BRAND: 'brand',
     CATEGORY: 'category',
     TAX_BRACKET: 'taxbracket',
