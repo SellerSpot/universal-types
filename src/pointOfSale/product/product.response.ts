@@ -1,7 +1,9 @@
 import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utilities';
 
-// field names for textFields involved in this API
+/**
+ * * Field names for textFields involved in this API used to send field based errors
+ */
 export type fieldNames =
     | 'name'
     | 'category'
