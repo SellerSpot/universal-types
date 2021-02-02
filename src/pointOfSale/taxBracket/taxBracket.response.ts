@@ -7,7 +7,7 @@ export type fieldNames = 'name' | 'id' | 'taxPercent';
 /**
  * Response when all taxBrackets are fetched from server
  */
-export type IGetTaxBrackets = IResponse & {
+export type IGetTaxAllBrackets = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema[];
     error?: string;
 };

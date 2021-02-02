@@ -1,5 +1,5 @@
+import { IResponse } from 'utilities/';
 import { tenantDbModels } from '@sellerspot/database-models';
-import { IResponse } from '../../utilities';
 
 // field names for textFields involved in this API
 export type fieldNames = 'name' | 'id';
@@ -7,7 +7,7 @@ export type fieldNames = 'name' | 'id';
 /**
  * Response when all stockUnits are fetched from server
  */
-export type IGetStockUnits = IResponse & {
+export type IGetAllStockUnits = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema[];
     error?: string;
 };

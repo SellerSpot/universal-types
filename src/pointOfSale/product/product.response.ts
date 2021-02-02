@@ -20,7 +20,7 @@ export type fieldNames =
 /**
  * Response when all products are fetched from server
  */
-export type IGetProducts = IResponse & {
+export type IGetAllProducts = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
     error?: string;
 };
