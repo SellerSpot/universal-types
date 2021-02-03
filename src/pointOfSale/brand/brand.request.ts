@@ -1,4 +1,4 @@
-import { IBrandSchema } from 'pointOfSale/databaseModels/Brand';
+import { tenantDbModels } from '@sellerspot/database-models';
 
 /**
  * Request to get a single brand from server
@@ -10,7 +10,10 @@ export interface IGetSingleBrand {
 /**
  * Request to create new brand
  */
-export type ICreateBrand = Omit<IBrandSchema, '_id' | 'createdAt' | 'updatedAt' | '__v'>;
+export type ICreateBrand = Omit<
+    tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema,
+    '_id' | 'createdAt' | 'updatedAt' | '__v'
+>;
 
 /**
  * Request to update a brand data
