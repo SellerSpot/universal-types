@@ -1,7 +1,9 @@
-import { tenantDbModels } from '@sellerspot/database-models';
+import { IProductSchema } from 'pointOfSale/databaseModels/Product';
 import { IResponse } from '../../utilities';
 
-// field names for textFields involved in this API
+/**
+ * * Field names for textFields involved in this API used to send field based errors
+ */
 export type fieldNames =
     | 'name'
     | 'category'
@@ -18,8 +20,8 @@ export type fieldNames =
 /**
  * Response when all products are fetched from server
  */
-export type IGetProducts = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
+export type IGetAllProducts = IResponse & {
+    data?: IProductSchema[];
     error?: string;
 };
 
@@ -27,7 +29,7 @@ export type IGetProducts = IResponse & {
  * Response when product is fetched from server
  */
 export type IGetProduct = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
+    data?: IProductSchema;
     error?: string;
 };
 
@@ -35,7 +37,7 @@ export type IGetProduct = IResponse & {
  * Response when a new product is created
  */
 export type ICreateProduct = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
+    data?: IProductSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -46,7 +48,7 @@ export type ICreateProduct = IResponse & {
  * Respose when a product is updated
  */
 export type IUpdateProduct = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
+    data?: IProductSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -57,7 +59,7 @@ export type IUpdateProduct = IResponse & {
  * Response when a product is deleted
  */
 export type IDeleteProduct = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
+    data?: IProductSchema;
     error?: string;
 };
 
@@ -67,7 +69,7 @@ export type IDeleteProduct = IResponse & {
 export type ISearchProduct = IResponse & {
     data?: {
         queryType: 'name' | 'barcode';
-        results: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
+        results: IProductSchema[];
     };
     error?: string;
 };

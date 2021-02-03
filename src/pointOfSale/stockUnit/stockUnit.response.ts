@@ -1,4 +1,4 @@
-import { tenantDbModels } from '@sellerspot/database-models';
+import { IStockUnitSchema } from 'pointOfSale/databaseModels/StockUnit';
 import { IResponse } from '../../utilities';
 
 // field names for textFields involved in this API
@@ -7,8 +7,8 @@ export type fieldNames = 'name' | 'id';
 /**
  * Response when all stockUnits are fetched from server
  */
-export type IGetStockUnits = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema[];
+export type IGetAllStockUnits = IResponse & {
+    data?: IStockUnitSchema[];
     error?: string;
 };
 
@@ -16,7 +16,7 @@ export type IGetStockUnits = IResponse & {
  * Response when stockUnit is fetched from server
  */
 export type IGetStockUnit = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema;
+    data?: IStockUnitSchema;
     error?: string;
 };
 
@@ -24,7 +24,7 @@ export type IGetStockUnit = IResponse & {
  * Response when a new stockUnit is created
  */
 export type ICreateStockUnit = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema;
+    data?: IStockUnitSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -35,7 +35,7 @@ export type ICreateStockUnit = IResponse & {
  * Respose when a stockUnit is updated
  */
 export type IUpdateStockUnit = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema;
+    data?: IStockUnitSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -46,6 +46,6 @@ export type IUpdateStockUnit = IResponse & {
  * Response when a stockUnit is deleted
  */
 export type IDeleteStockUnit = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema;
+    data?: IStockUnitSchema;
     error?: string;
 };

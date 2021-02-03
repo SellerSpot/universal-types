@@ -1,4 +1,5 @@
-import { tenantDbModels } from '@sellerspot/database-models';
+import { IStockUnitSchema } from 'pointOfSale/databaseModels/StockUnit';
+
 /**
  * Request to get a single stockUnit from server
  */
@@ -9,10 +10,7 @@ export interface IGetSingleStockUnit {
 /**
  * Request to create new stockUnit
  */
-export type ICreateStockUnit = Omit<
-    tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema,
-    '_id' | 'createdAt' | 'updatedAt' | '__v'
->;
+export type ICreateStockUnit = Omit<IStockUnitSchema, '_id' | 'createdAt' | 'updatedAt' | '__v'>;
 
 /**
  * Request to update a stockUnit data

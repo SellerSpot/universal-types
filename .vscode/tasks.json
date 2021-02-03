@@ -1,6 +1,7 @@
 {
     "version": "2.0.0",
-    "tasks": [{
+    "tasks": [
+        {
             "label": "npm-link-database-models",
             "type": "shell",
             "command": "npm link ../database-models/",

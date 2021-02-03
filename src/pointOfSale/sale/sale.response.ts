@@ -1,4 +1,4 @@
-import { tenantDbModels } from '@sellerspot/database-models';
+import { ISaleSchema } from 'pointOfSale/databaseModels/Sale';
 import { IResponse } from '../../utilities';
 
 // field names for textFields involved in this API
@@ -13,8 +13,8 @@ export type fieldNames =
 /**
  * Response when all sales are fetched from server
  */
-export type IGetSales = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.SaleModel.ISaleSchema[];
+export type IGetAllSales = IResponse & {
+    data?: ISaleSchema[];
     error?: string;
 };
 
@@ -22,7 +22,7 @@ export type IGetSales = IResponse & {
  * Response when sale is fetched from server
  */
 export type IGetSale = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.SaleModel.ISaleSchema;
+    data?: ISaleSchema;
     error?: string;
 };
 
@@ -30,7 +30,7 @@ export type IGetSale = IResponse & {
  * Response when a new sale is created
  */
 export type ICreateSale = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.SaleModel.ISaleSchema;
+    data?: ISaleSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -41,7 +41,7 @@ export type ICreateSale = IResponse & {
  * Respose when a sale is updated
  */
 export type IUpdateSale = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.SaleModel.ISaleSchema;
+    data?: ISaleSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -52,6 +52,6 @@ export type IUpdateSale = IResponse & {
  * Response when a sale is deleted
  */
 export type IDeleteSale = IResponse & {
-    data?: tenantDbModels.pointOfSaleModels.SaleModel.ISaleSchema;
+    data?: ISaleSchema;
     error?: string;
 };

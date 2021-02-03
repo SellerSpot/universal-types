@@ -1,4 +1,4 @@
-import { tenantDbModels } from '@sellerspot/database-models';
+import { IProductSchema } from 'pointOfSale/databaseModels/Product';
 
 /**
  * Request to get a single product from server
@@ -10,10 +10,7 @@ export interface IGetSingleProduct {
 /**
  * Request to create new product
  */
-export type ICreateProduct = Omit<
-    tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema,
-    '_id' | 'createdAt' | 'updatedAt' | '__v'
->;
+export type ICreateProduct = Omit<IProductSchema, '_id' | 'createdAt' | 'updatedAt' | '__v'>;
 
 /**
  * Request to update a product data
