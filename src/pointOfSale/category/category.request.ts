@@ -1,4 +1,4 @@
-import { ICategorySchema } from 'pointOfSale/databaseModels/Category';
+import { tenantDbModels } from '@sellerspot/database-models';
 
 /**
  * Request to get a single category from server
@@ -10,7 +10,10 @@ export interface IGetSingleCategory {
 /**
  * Request to create new category
  */
-export type ICreateCategory = Omit<ICategorySchema, '_id' | 'createdAt' | 'updatedAt' | '__v'>;
+export type ICreateCategory = Omit<
+    tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema,
+    '_id' | 'createdAt' | 'updatedAt' | '__v'
+>;
 
 /**
  * Request to update a category data

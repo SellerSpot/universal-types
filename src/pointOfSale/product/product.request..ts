@@ -1,4 +1,4 @@
-import { IProductSchema } from 'pointOfSale/databaseModels/Product';
+import { tenantDbModels } from '@sellerspot/database-models';
 
 /**
  * Request to get a single product from server
@@ -10,7 +10,25 @@ export interface IGetSingleProduct {
 /**
  * Request to create new product
  */
-export type ICreateProduct = Omit<IProductSchema, '_id' | 'createdAt' | 'updatedAt' | '__v'>;
+export type ICreateProduct = Omit<
+    tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema,
+    | '_id'
+    | 'createdAt'
+    | 'updatedAt'
+    | '__v'
+    | 'category'
+    | 'brand'
+    | 'stockInformation'
+    | 'taxBracket'
+> & {
+    category: string;
+    brand: string;
+    stockInformation: {
+        availableStock: number;
+        stockUnit: string;
+    };
+    taxBracket: string[];
+};
 
 /**
  * Request to update a product data

@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "webpack --mode development --env development",
         "build": "webpack --mode production --env production",
-        "build:dev": "webpack --mode development --env production",
+        "build:dev": "webpack --mode development --env production && yalc push",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix"
     },

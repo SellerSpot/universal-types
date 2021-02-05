@@ -1,4 +1,4 @@
-import { ICategorySchema } from 'pointOfSale/databaseModels/Category';
+import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utilities';
 
 // field names for textFields involved in this API
@@ -8,7 +8,7 @@ export type fieldNames = 'name' | 'id';
  * Response when all categories are fetched from server
  */
 export type IGetAllCategories = IResponse & {
-    data?: ICategorySchema[];
+    data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema[];
     error?: string;
 };
 
@@ -16,7 +16,7 @@ export type IGetAllCategories = IResponse & {
  * Response when category is fetched from server
  */
 export type IGetCategory = IResponse & {
-    data?: ICategorySchema;
+    data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
     error?: string;
 };
 
@@ -24,7 +24,7 @@ export type IGetCategory = IResponse & {
  * Response when a new category is created
  */
 export type ICreateCategory = IResponse & {
-    data?: ICategorySchema;
+    data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -35,7 +35,7 @@ export type ICreateCategory = IResponse & {
  * Respose when a category is updated
  */
 export type IUpdateCategory = IResponse & {
-    data?: ICategorySchema;
+    data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -46,6 +46,6 @@ export type IUpdateCategory = IResponse & {
  * Response when a category is deleted
  */
 export type IDeleteCategory = IResponse & {
-    data?: ICategorySchema;
+    data?: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
     error?: string;
 };
