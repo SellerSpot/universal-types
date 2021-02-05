@@ -12,8 +12,23 @@ export interface IGetSingleProduct {
  */
 export type ICreateProduct = Omit<
     tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema,
-    '_id' | 'createdAt' | 'updatedAt' | '__v'
->;
+    | '_id'
+    | 'createdAt'
+    | 'updatedAt'
+    | '__v'
+    | 'category'
+    | 'brand'
+    | 'stockInformation'
+    | 'taxBracket'
+> & {
+    category: string;
+    brand: string;
+    stockInformation: {
+        availableStock: number;
+        stockUnit: string;
+    };
+    taxBracket: string[];
+};
 
 /**
  * Request to update a product data
