@@ -19,8 +19,7 @@
         "universal-types"
     ],
     "author": "RohitRajP",
-    "contributors": [
-        {
+    "contributors": [{
             "name": "Rohit Raj",
             "email": "rij7u7d@gmail.com",
             "url": "https://github.com/RohitRajP"
@@ -56,9 +55,6 @@
         "webpack-node-externals": "^2.5.2",
         "webpack-shell-plugin-next": "^2.0.8",
         "yalc": "^1.0.0-pre.50"
-    },
-    "peerDependencies": {
-        "@sellerspot/database-models": "^1.6.0"
     },
     "dependencies": {
         "@sellerspot/database-models": "^10.5.2"
