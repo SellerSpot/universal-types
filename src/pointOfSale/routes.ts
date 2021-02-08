@@ -5,6 +5,7 @@ export const ROUTES = {
     // authorization and authencation
     AUTHORIZE: 'authorize',
     AUTHENTICATE: 'authenticate',
+    VERIFY_TOKEN: 'verifytoken',
 
     BRAND: 'brand',
     CATEGORY: 'category',

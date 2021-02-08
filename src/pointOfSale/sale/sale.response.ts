@@ -13,7 +13,7 @@ export type fieldNames =
 /**
  * Response when all sales are fetched from server
  */
-export type IGetSales = IResponse & {
+export type IGetAllSales = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.SaleModel.ISaleSchema[];
     error?: string;
 };

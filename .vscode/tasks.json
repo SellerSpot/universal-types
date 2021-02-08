@@ -1,21 +1,6 @@
 {
     "version": "2.0.0",
-    "tasks": [{
-            "label": "npm-link-database-models",
-            "type": "shell",
-            "command": "npm link ../database-models/",
-            "presentation": {
-                "group": "npm-link",
-                "focus": true,
-                "reveal": "always",
-                "panel": "new",
-                "showReuseMessage": false
-            },
-            "runOptions": {
-                "runOn": "default"
-            },
-            "problemMatcher": []
-        },
+    "tasks": [
         {
             "label": "open-terminal",
             "type": "shell",

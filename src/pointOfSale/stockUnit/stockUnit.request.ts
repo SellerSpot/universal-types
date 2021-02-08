@@ -1,4 +1,5 @@
 import { tenantDbModels } from '@sellerspot/database-models';
+
 /**
  * Request to get a single stockUnit from server
  */

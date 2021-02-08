@@ -1,7 +1,9 @@
 import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utilities';
 
-// field names for textFields involved in this API
+/**
+ * * Field names for textFields involved in this API used to send field based errors
+ */
 export type fieldNames =
     | 'name'
     | 'category'
@@ -18,7 +20,7 @@ export type fieldNames =
 /**
  * Response when all products are fetched from server
  */
-export type IGetProducts = IResponse & {
+export type IGetAllProducts = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
     error?: string;
 };

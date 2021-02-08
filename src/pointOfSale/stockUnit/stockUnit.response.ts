@@ -7,7 +7,7 @@ export type fieldNames = 'name' | 'id';
 /**
  * Response when all stockUnits are fetched from server
  */
-export type IGetStockUnits = IResponse & {
+export type IGetAllStockUnits = IResponse & {
     data?: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema[];
     error?: string;
 };
