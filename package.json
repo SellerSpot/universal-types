@@ -37,7 +37,7 @@
     },
     "homepage": "https://github.com/SellerSpot/universal-types#readme",
     "devDependencies": {
-        "@sellerspot/database-models": "^1.4.1",
+        "@sellerspot/database-models": "^1.6.0",
         "@types/webpack": "4.41.25",
         "@types/webpack-node-externals": "^2.5.0",
         "@typescript-eslint/eslint-plugin": "^4.10.0",
