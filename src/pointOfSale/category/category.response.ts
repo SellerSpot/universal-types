@@ -2,7 +2,7 @@ import { tenantDbModels } from '@sellerspot/database-models';
 import { IResponse } from '../../utilities';
 
 // field names for textFields involved in this API
-export type fieldNames = 'name' | 'id';
+export type fieldNames = 'name';
 
 /**
  * Response when all categories are fetched from server
