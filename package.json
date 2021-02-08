@@ -1,6 +1,6 @@
 {
     "name": "@sellerspot/universal-types",
-    "version": "1.5.2",
+    "version": "1.5.3",
     "description": "Contains all common type definitions shared across all applications in the SellerSpot suite.",
     "main": "dist/index.js",
     "scripts": {
