@@ -17,25 +17,11 @@ export type fieldNames =
     | 'profitPercent'
     | 'taxBracket';
 
-// IProductSchema modified to accept populated values
-type IPopulatedProductSchema = Omit<
-    tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema,
-    'category' | 'brand' | 'stockInformation' | 'taxBracket'
-> & {
-    category: tenantDbModels.pointOfSaleModels.CategoryModel.ICategorySchema;
-    brand: tenantDbModels.pointOfSaleModels.BrandModel.IBrandSchema;
-    stockInformation: {
-        availableStock: number;
-        stockUnit: tenantDbModels.pointOfSaleModels.StockUnitModel.IStockUnitSchema;
-    };
-    taxBracket: tenantDbModels.pointOfSaleModels.TaxBracketModel.ITaxBracketSchema[];
-};
-
 /**
  * Response when all products are fetched from server
  */
 export type IGetAllProducts = IResponse & {
-    data?: IPopulatedProductSchema[];
+    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
     error?: string;
 };
 
@@ -43,7 +29,7 @@ export type IGetAllProducts = IResponse & {
  * Response when product is fetched from server
  */
 export type IGetProduct = IResponse & {
-    data?: IPopulatedProductSchema;
+    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
     error?: string;
 };
 
@@ -51,7 +37,7 @@ export type IGetProduct = IResponse & {
  * Response when a new product is created
  */
 export type ICreateProduct = IResponse & {
-    data?: IPopulatedProductSchema;
+    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -62,7 +48,7 @@ export type ICreateProduct = IResponse & {
  * Respose when a product is updated
  */
 export type IUpdateProduct = IResponse & {
-    data?: IPopulatedProductSchema;
+    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
     error?: {
         name: fieldNames;
         message: string;
@@ -73,7 +59,7 @@ export type IUpdateProduct = IResponse & {
  * Response when a product is deleted
  */
 export type IDeleteProduct = IResponse & {
-    data?: IPopulatedProductSchema;
+    data?: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema;
     error?: string;
 };
 
@@ -83,7 +69,7 @@ export type IDeleteProduct = IResponse & {
 export type ISearchProduct = IResponse & {
     data?: {
         queryType: 'name' | 'barcode';
-        results: IPopulatedProductSchema[];
+        results: tenantDbModels.pointOfSaleModels.ProductModel.IProductSchema[];
     };
     error?: string;
 };
