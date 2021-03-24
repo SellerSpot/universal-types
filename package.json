@@ -1,7 +1,7 @@
 {
     "name": "@sellerspot/universal-types",
     "version": "1.6.0",
-    "description": "Contains all common type definitions shared across all applications in the SellerSpot suite.",
+    "description": "Contains all common type definitions shared across all applications in the SellerSpot ecosystem.",
     "main": "dist/index.js",
     "scripts": {
         "dev": "webpack --mode development --env development",
@@ -19,8 +19,7 @@
         "universal-types"
     ],
     "author": "RohitRajP",
-    "contributors": [
-        {
+    "contributors": [{
             "name": "Rohit Raj",
             "email": "rij7u7d@gmail.com",
             "url": "https://github.com/RohitRajP"
