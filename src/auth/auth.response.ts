@@ -1,4 +1,4 @@
-import { IResponse } from '../../utilities';
+import { IResponse } from '../utilities';
 
 export interface IAuth {
     name: string;
