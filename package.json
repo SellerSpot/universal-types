@@ -19,7 +19,8 @@
         "universal-types"
     ],
     "author": "RohitRajP",
-    "contributors": [{
+    "contributors": [
+        {
             "name": "Rohit Raj",
             "email": "rij7u7d@gmail.com",
             "url": "https://github.com/RohitRajP"
@@ -57,6 +58,7 @@
         "yalc": "^1.0.0-pre.50"
     },
     "dependencies": {
-        "@sellerspot/database-models": "^10.5.2"
+        "@sellerspot/database-models": "^10.5.2",
+        "winston": "^3.3.3"
     }
 }

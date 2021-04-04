@@ -1,8 +1,4 @@
-export interface IAuthorizeTenantRequest {
-    domainName: string;
-}
-
-export interface IAuthenticateUserRequest {
-    email: string;
-    password: string;
+export interface ISignupTenantRequest {
+    name: string;
+    storeName: string;
 }

@@ -1,14 +1,16 @@
+import { ISignupTenantRequest } from './auth.request';
+import { ISignupTenantResponse } from './auth.response';
+
 /**
- * Holds the major routes for the server
+ * contains all routes related to auth service
  */
 export default {
-    // auth routes
-    AUTH: {
-        SIGN_UP: 'auth/signup',
-        SIGN_IN: 'auth/signin',
-        VERIFY_TOKEN: 'verifytoken',
-        IDENTIFY_STORE: 'auth/identifystore',
-        FORGOT_PASSWORD: 'auth/forgotpassword',
-        RESET_PASSWORD: 'auth/resetpassword',
-    },
+    /**
+     * Signs up the user
+     *
+     * @request  POST
+     * @type {ISignupTenantRequest} requestBody
+     * @type {ISignupTenantResponse} responseBody
+     */
+    SIGN_UP: '/signup',
 };
