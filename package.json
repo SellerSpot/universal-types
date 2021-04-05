@@ -8,7 +8,9 @@
         "build": "webpack --mode production --env production",
         "build:dev": "webpack --mode development --env production && yalc push",
         "lint": "eslint src",
-        "lint:fix": "eslint src --fix"
+        "lint:fix": "eslint src --fix",
+        "yalc:link": "yalc link @sellerspot/database-models",
+        "yalc:remove": "yalc remove --all"
     },
     "repository": {
         "type": "git",
@@ -58,7 +60,6 @@
         "yalc": "^1.0.0-pre.50"
     },
     "dependencies": {
-        "@sellerspot/database-models": "^10.5.2",
-        "winston": "^3.3.3"
+        "@sellerspot/database-models": "^10.7.0"
     }
 }

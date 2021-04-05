@@ -1,51 +1,51 @@
-import { default as auth } from './auth/routes';
-import { default as catalogue } from './catalogue/routes';
-import { default as core } from './core/routes';
-import { default as ecom } from './ecom/routes';
-import { default as pos } from './pos/routes';
+import { AUTH } from './auth/routes';
+import { CATALOGUE } from './catalogue/routes';
+import { CORE } from './core/routes';
+import { ECOM } from './ecom/routes';
+import { POS } from './pos/routes';
 
-const service = {
+enum SERVICE {
     /**
      * auth service
      */
-    AUTH: '/auth',
+    AUTH = '/auth',
     /**
      * Point of sale service
      */
-    POS: '/pos',
+    POS = '/pos',
     /**
      * catalogure service
      */
-    CATALOGUE: '/catalogue',
+    CATALOGUE = '/catalogue',
     /**
      * core will be the base route
      */
-    CORE: '',
-};
+    CORE = '',
+}
 
 export default {
     /**
      * Contains all services
      */
-    service,
+    SERVICE,
     /**
      * Contains all auth related services
      */
-    auth,
+    AUTH,
     /**
      * Contains all catalogue related services
      */
-    catalogue,
+    CATALOGUE,
     /**
      * Contains all core related services
      */
-    core,
+    CORE,
     /**
      * Contains all ecom related services
      */
-    ecom,
+    ECOM,
     /**
      * Contains all pos related services
      */
-    pos,
+    POS,
 };

@@ -1,8 +1,13 @@
 /**
  * Holds the major routes for the server
  */
-export default {
-    dummy: {
-        dummyRoute: 'delete me and my parent when adding first route here',
-    },
-};
+export enum ECOM {
+    /**
+     * typedoc should be in this format
+     *
+     * @request  POST | GET | PUT | DELETE
+     * @type {typeofthereq} requestBody
+     * @type {typeoftheres} responseBody
+     */
+    DUMMY = 'delete me when adding first route here',
+}

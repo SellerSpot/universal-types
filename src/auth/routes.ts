@@ -4,7 +4,7 @@ import { ISignupTenantResponse } from './auth.response';
 /**
  * contains all routes related to auth service
  */
-export default {
+export enum AUTH {
     /**
      * Signs up the user
      *
@@ -12,5 +12,5 @@ export default {
      * @type {ISignupTenantRequest} requestBody
      * @type {ISignupTenantResponse} responseBody
      */
-    SIGN_UP: '/signup',
-};
+    SIGN_UP = '/signup',
+}
