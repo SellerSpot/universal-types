@@ -1,6 +1,7 @@
-import { coreDbModels } from '@sellerspot/database-models';
-
-export type ISignupTenantRequest = Pick<
-    coreDbModels.TenantModel.ITenant,
-    'name' | 'email' | 'password' | 'storeName'
->;
+export interface ISignupTenantRequest {
+    name: string;
+    email: string;
+    password: string;
+    storeName: string;
+    domainName: string;
+}
