@@ -10,7 +10,12 @@
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
         "yalc:link": "yalc link @sellerspot/database-models",
-        "yalc:remove": "yalc remove --all"
+        "yalc:remove": "yalc remove --all",
+        "prettier": "prettier --write src",
+        "lint-staged": "lint-staged",
+        "postinstall": "npm run husky:install",
+        "husky:install": "husky install",
+        "husky:pre-commit": "npm run lint-staged"
     },
     "repository": {
         "type": "git",
@@ -38,6 +43,13 @@
         "url": "https://github.com/SellerSpot/universal-types/issues"
     },
     "homepage": "https://github.com/SellerSpot/universal-types#readme",
+    "lint-staged": {
+        "*.{ts,tsx,less}": [
+            "prettier --write",
+            "git add"
+        ],
+        "*.{ts,tsx}": "eslint --fix --max-warnings 0"
+    },
     "devDependencies": {
         "@types/webpack": "4.41.25",
         "@types/webpack-node-externals": "^2.5.0",
@@ -49,6 +61,8 @@
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-prettier": "^3.3.0",
         "fork-ts-checker-webpack-plugin": "^6.0.7",
+        "husky": "^6.0.0",
+        "lint-staged": "^10.5.4",
         "prettier": "^2.2.1",
         "ts-loader": "^8.0.12",
         "ts-node": "^9.1.1",
