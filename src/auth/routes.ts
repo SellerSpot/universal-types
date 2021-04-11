@@ -22,6 +22,13 @@ export enum AUTH {
     INFO = '/info',
 
     /**
+     * Signs in the user
+     *
+     * @request  POST
+     */
+    SIGN_IN = '/signin',
+
+    /**
      * Signs out the user
      * @request  POST
      */

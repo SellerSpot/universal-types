@@ -31,7 +31,7 @@ const webpackConfiguration = (env: {
                     test: /\.(ts|tsx)$/i,
                     loader: 'ts-loader',
                     options: {
-                        transpileOnly: !isProduction, // this generates .d.ts when it is false
+                        transpileOnly: false, // this generates .d.ts when it is false
                     },
                 },
             ],

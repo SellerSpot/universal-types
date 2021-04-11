@@ -5,3 +5,5 @@ export interface ISignupTenantRequest {
     storeName: string;
     domainName: string;
 }
+
+export type TSigninTenantRequest = Omit<ISignupTenantRequest, 'name' | 'storeName'>;

@@ -5,12 +5,10 @@
     "main": "dist/index.js",
     "scripts": {
         "dev": "webpack --mode development --env development",
+        "build:dev": "yalc push",
         "build": "webpack --mode production --env production",
-        "build:dev": "webpack --mode development --env production && yalc push",
         "lint": "eslint src",
-        "lint:fix": "eslint src --fix",
-        "yalc:link": "yalc link @sellerspot/database-models",
-        "yalc:remove": "yalc remove --all"
+        "lint:fix": "eslint src --fix"
     },
     "repository": {
         "type": "git",
@@ -59,8 +57,5 @@
         "webpack-node-externals": "^2.5.2",
         "webpack-shell-plugin-next": "^2.0.8",
         "yalc": "^1.0.0-pre.50"
-    },
-    "dependencies": {
-        "@sellerspot/database-models": "^10.7.0"
     }
 }
