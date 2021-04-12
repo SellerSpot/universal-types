@@ -13,4 +13,24 @@ export enum AUTH {
      * @type {ISignupTenantResponse} responseBody
      */
     SIGN_UP = '/signup',
+
+    /**
+     * Signs up the user
+     *
+     * @request  GET
+     */
+    INFO = '/info',
+
+    /**
+     * Signs in the user
+     *
+     * @request  POST
+     */
+    SIGN_IN = '/signin',
+
+    /**
+     * Signs out the user
+     * @request  POST
+     */
+    SIGN_OUT = '/signout',
 }

@@ -1,7 +1,11 @@
-import { IResponse } from 'utilities';
-import { coreDbModels } from '@sellerspot/database-models';
+import { IResponse } from '../utilities';
 
-export type ISignupTenantResponse = IResponse & {
-    data: coreDbModels.TenantModel.ITenant;
-    error: string;
-};
+export interface ISignupTenantResponse extends IResponse {
+    data: {
+        email: string;
+        name: string;
+        storeName: string;
+        id: string;
+        domainName: string;
+    };
+}
