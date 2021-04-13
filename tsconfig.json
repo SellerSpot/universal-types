@@ -15,7 +15,8 @@
         "declarationMap": true,
         "declarationDir": "./dist",
         "outDir": "./dist",
-        "baseUrl": "./src",
+        "baseUrl": "./src"
     },
     "include": ["src/**/*"],
+    "exclude": ["webpack.config.ts"]
 }
