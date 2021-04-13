@@ -9,7 +9,7 @@
         "build:dev": "webpack --mode development --env production && yalc push",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
-        "yalc:link": "yalc link @sellerspot/database-models",
+        "yalc:link": "",
         "yalc:remove": "yalc remove --all",
         "prettier": "prettier --write src",
         "lint-staged": "lint-staged",
