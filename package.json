@@ -52,7 +52,7 @@
     },
     "devDependencies": {
         "@types/mongoose": "^5.10.4",
-        "@types/webpack": "4.41.25",
+        "@types/webpack": "^4.41.25",
         "@types/webpack-node-externals": "^2.5.0",
         "@typescript-eslint/eslint-plugin": "^4.10.0",
         "@typescript-eslint/parser": "^4.10.0",
