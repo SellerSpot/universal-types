@@ -11,10 +11,5 @@ export interface ISignupTenantResponse extends IResponse {
 }
 
 export interface ICurrentUserResponse extends IResponse {
-    data: {
-        email: string;
-        name: string;
-        storeName: string;
-        id: string;
-    };
+    data: Pick<ISignupTenantResponse, 'data'>[];
 }
