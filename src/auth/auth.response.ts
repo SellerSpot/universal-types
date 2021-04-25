@@ -9,3 +9,12 @@ export interface ISignupTenantResponse extends IResponse {
         domainName: string;
     };
 }
+
+export interface ICurrentUserResponse extends IResponse {
+    data: {
+        email: string;
+        name: string;
+        storeName: string;
+        id: string;
+    };
+}

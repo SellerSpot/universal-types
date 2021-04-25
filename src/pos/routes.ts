@@ -3,11 +3,9 @@
  */
 export enum POS {
     /**
-     * typedoc should be in this format
+     * pos service heartbeat
      *
-     * @request  POST | GET | PUT | DELETE
-     * @type {typeofthereq} requestBody
-     * @type {typeoftheres} responseBody
+     * @request  GET
      */
-    DUMMY = 'delete me when adding first route here',
+    INFO = '/info',
 }
