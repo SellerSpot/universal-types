@@ -1,2 +1,2 @@
-export * as authRequestTypes from './auth.request';
-export * as authResponseTypes from './auth.response';
+export * from './auth.request';
+export * from './auth.response';

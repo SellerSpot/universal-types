@@ -11,5 +11,5 @@ export interface ISignupTenantResponse extends IResponse {
 }
 
 export interface ICurrentUserResponse extends IResponse {
-    data: Pick<ISignupTenantResponse, 'data'>[];
+    data: ISignupTenantResponse['data'][];
 }
