@@ -1,6 +1,6 @@
 {
     "name": "@sellerspot/universal-types",
-    "version": "1.8.4",
+    "version": "1.8.6",
     "description": "Contains all common type definitions shared across all applications in the SellerSpot ecosystem.",
     "main": "dist/index.js",
     "scripts": {
@@ -37,6 +37,11 @@
             "name": "ThayalanGR",
             "email": "grthayalan18@gmail.com",
             "url": "https://github.com/ThayalanGR"
+        },
+        {
+            "name": "Immanuel Irwin",
+            "email": "noelimmanuel1998@gmail.com",
+            "url": "https://github.com/noelimmi"
         }
     ],
     "license": "ISC",

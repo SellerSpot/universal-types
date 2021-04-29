@@ -1,5 +1,5 @@
 import path from 'path';
-import webpack, { Configuration } from 'webpack';
+import { Configuration, DefinePlugin } from 'webpack';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import { WebpackCustomRunScriptsPlugin } from '@sellerspot/webpack-run-scripts-custom-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
@@ -47,7 +47,7 @@ const webpackConfiguration = (env: {
                 ? new WebpackCustomRunScriptsPlugin({
                       command: 'npm run build:dev',
                   })
-                : new webpack.DefinePlugin({}),
+                : new DefinePlugin({}),
         ],
         devtool: false,
         watch: !isProduction,
