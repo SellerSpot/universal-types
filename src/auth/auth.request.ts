@@ -6,4 +6,4 @@ export interface ISignupTenantRequest {
     domainName: string;
 }
 
-export type TSigninTenantRequest = Pick<ISignupTenantRequest, 'email' | 'password'>;
+export type ISigninTenantRequest = Pick<ISignupTenantRequest, 'email' | 'password'>;

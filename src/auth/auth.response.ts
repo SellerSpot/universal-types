@@ -10,6 +10,8 @@ export interface ISignupTenantResponse extends IResponse {
     };
 }
 
+export type ISigninTenantResposne = ISignupTenantResponse;
+
 export interface ICurrentUserResponse extends IResponse {
     data: ISignupTenantResponse['data'][];
 }

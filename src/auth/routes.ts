@@ -1,4 +1,5 @@
-import { ISignupTenantRequest, TSigninTenantRequest } from './auth.request';
+import { REQUEST_METHOD } from '../utilities';
+import { ISignupTenantRequest, ISigninTenantRequest } from './auth.request';
 import { ISignupTenantResponse } from './auth.response';
 
 /**
@@ -6,38 +7,41 @@ import { ISignupTenantResponse } from './auth.response';
  */
 export enum AUTH {
     /**
+     * auth server info
+     *
+     * @request  @type {REQUEST_METHOD.GET}
+     */
+    INFO = '/info',
+
+    /**
      * Signs up the user
      *
-     * @request  POST
+     * @request  @type {REQUEST_METHOD.POST}
      * @type {ISignupTenantRequest} requestBody
      * @type {ISignupTenantResponse} responseBody
      */
     SIGN_UP = '/signup',
 
     /**
-     * auth server info
-     *
-     * @request  GET
-     */
-    INFO = '/info',
-
-    /**
      * Signs in the user
-     * @type {TSigninTenantRequest} requestBody
+     *
+     * @request  @type {REQUEST_METHOD.POST}
+     * @type {ISigninTenantRequest} requestBody
      * @type {ISignupTenantResponse} responseBody
-     * @request  GET
      */
     SIGN_IN = '/signin',
 
     /**
      * Signs out the user
-     * @request  POST
+     *
+     * @request  @type {REQUEST_METHOD.POST}
      */
     SIGN_OUT = '/signout',
 
     /**
      * get details about sign in user
-     * @request  GET
+     *
+     * @request  @type {REQUEST_METHOD.GET}
      */
     CURRENT_USER = '/currentuser',
 }
