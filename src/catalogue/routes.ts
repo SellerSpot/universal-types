@@ -1,29 +1,29 @@
 export enum CATALOGUE {
     /**
-     * @request GET
+     * @method GET
      */
-    LIST_CATAGORY = '/catagory',
+    LIST_CATAGORY = '/categories',
     /**
-     * @request GET
+     * @method GET
      * @pathparam catagoryid
      */
-    GET_CATAGORY = '/catagory:id',
+    GET_CATAGORY = '/categories:id',
     /**
-     * @request POST
+     * @method POST
      * @type {} requestBody
      * @type {} responseBody
      */
-    CREATE_CATAGORY = '/catagory',
+    CREATE_CATAGORY = '/categories',
     /**
-     * @request PUT
+     * @method PUT
      * @pathparam catagoryid
      * @type {} requestBody
      * @type {} responseBody
      */
-    EDIT_CATAGORY = '/catagory:id',
+    EDIT_CATAGORY = '/categories:id',
     /**
-     * @request DELETE
+     * @method DELETE
      * @pathparam catagoryid
      */
-    DELETE_CATAGORY = '/catagory:id',
+    DELETE_CATAGORY = '/categories:id',
 }

@@ -1,6 +1,6 @@
 {
     "name": "@sellerspot/universal-types",
-    "version": "1.8.5",
+    "version": "1.8.7",
     "description": "Contains all common type definitions shared across all applications in the SellerSpot ecosystem.",
     "main": "dist/index.js",
     "scripts": {
@@ -16,7 +16,7 @@
         "husky:install": "husky install",
         "husky:pre-commit": "npm run lint-staged",
         "prepare": "npm run husky:install",
-        "update:pacakges": ""
+        "update:pacakges": "npm i -D @sellerspot/webpack-run-scripts-custom-plugin"
     },
     "repository": {
         "type": "git",
@@ -51,12 +51,12 @@
     "homepage": "https://github.com/SellerSpot/universal-types#readme",
     "lint-staged": {
         "*.{ts,tsx,less}": [
-            "prettier --write",
-            "git add"
+            "prettier --write"
         ],
-        "*.{ts,tsx}": "eslint --fix --max-warnings 0"
+        "!(*webpack.config).{ts,tsx}": "eslint --fix --max-warnings 0"
     },
     "devDependencies": {
+        "@sellerspot/webpack-run-scripts-custom-plugin": "^1.17.3",
         "@types/mongoose": "^5.10.4",
         "@types/webpack": "^4.41.25",
         "@types/webpack-node-externals": "^2.5.0",
@@ -78,7 +78,6 @@
         "webpack": "^4.46.0",
         "webpack-cli": "^4.2.0",
         "webpack-node-externals": "^2.5.2",
-        "webpack-shell-plugin-next": "^1.2.0",
         "yalc": "^1.0.0-pre.50"
     }
 }
