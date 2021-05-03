@@ -7,13 +7,13 @@ export enum ERROR_CODE {
     VALIDATION_ERROR = 4,
     UNKNOWN_ERROR = 5,
 
-    //Auth Errors -> 1xxx
-
-    NOT_AUTHENTICATED_USER = 1001,
-    TENANT_NOT_CREATED = 1002,
-    TENANT_INVALID = 1003,
-    INVALID_TOKEN = 1004,
-
-    //Catalogue Errors -> 2xxx
-    CATEGORY_NOT_FOUND = 2001,
+    /**
+     * Auth Errors -> 1xxx
+     */
+    DOMAIN_ALREADY_EXIST = 1001,
+    TENANT_ALREADY_EXIST = 1002,
+    TENANT_NOT_CREATED = 1003,
+    NOT_AUTHENTICATED_USER = 1004,
+    TENANT_INVALID = 1005,
+    INVALID_TOKEN = 1006,
 }
