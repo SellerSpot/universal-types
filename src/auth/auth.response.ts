@@ -1,17 +1,26 @@
-import { IResponse } from '../utilities';
+import { IResponse, ITenantJWTToken } from '../utilities';
+
+export interface IUserDetails {
+    id: string;
+    email: string;
+    name: string;
+}
+
+export interface IStoreDetails {
+    id: string;
+    storeName: string;
+    domainName: string;
+}
 
 export interface ISignupTenantResponse extends IResponse {
     data: {
-        email: string;
-        name: string;
-        storeName: string;
-        id: string;
-        domainName: string;
+        user: IUserDetails;
+        store: IStoreDetails;
     };
 }
 
 export type ISigninTenantResposne = ISignupTenantResponse;
 
 export interface ICurrentUserResponse extends IResponse {
-    data: ISignupTenantResponse['data'][];
+    data: ITenantJWTToken;
 }

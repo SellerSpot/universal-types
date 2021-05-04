@@ -10,10 +10,17 @@ export enum ERROR_CODE {
     /**
      * Auth Errors -> 1xxx
      */
+    //Tenant Sign Up
     DOMAIN_ALREADY_EXIST = 1001,
     TENANT_ALREADY_EXIST = 1002,
     TENANT_NOT_CREATED = 1003,
     NOT_AUTHENTICATED_USER = 1004,
     TENANT_INVALID = 1005,
     INVALID_TOKEN = 1006,
+
+    /**
+     * Catalogue Errors -> 2xxx
+     */
+    //Category
+    CATEGORY_NOT_FOUND = 2001,
 }
