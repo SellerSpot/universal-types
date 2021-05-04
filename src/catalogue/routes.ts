@@ -1,13 +1,29 @@
-/**
- * Holds the major routes for the server
- */
 export enum CATALOGUE {
     /**
-     * typedoc should be in this format
-     *
-     * @request  POST | GET | PUT | DELETE
-     * @type {typeofthereq} requestBody
-     * @type {typeoftheres} responseBody
+     * @method GET
      */
-    DUMMY = 'delete me when adding first route here',
+    LIST_CATAGORY = '/categories',
+    /**
+     * @method GET
+     * @pathparam catagoryid
+     */
+    GET_CATAGORY = '/categories:id',
+    /**
+     * @method POST
+     * @type {} requestBody
+     * @type {} responseBody
+     */
+    CREATE_CATAGORY = '/categories',
+    /**
+     * @method PUT
+     * @pathparam catagoryid
+     * @type {} requestBody
+     * @type {} responseBody
+     */
+    EDIT_CATAGORY = '/categories:id',
+    /**
+     * @method DELETE
+     * @pathparam catagoryid
+     */
+    DELETE_CATAGORY = '/categories:id',
 }

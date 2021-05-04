@@ -2,15 +2,12 @@
  * used to derive arugument list from the function
  * useful when props needs to be derived from a interface property's function
  */
+
+import { IUserDetails } from '../auth';
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ArgumentsType<T extends (...args: any[]) => any> = T extends (...args: infer A) => any
     ? A
     : never;
 
-export interface ITenantJWTToken {
-    id: string;
-    name: string;
-    email: string;
-    storeName: string;
-    domainName: string;
-}
+export type ITenantJWTToken = IUserDetails & { domainName: string; exp?: number; iat?: number };
