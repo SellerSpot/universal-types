@@ -1,4 +1,4 @@
-import { IResponse, ITenantJWTToken } from '../utilities';
+import { IResponse, ITenantJWTToken } from '../../utilities';
 
 export interface IUserDetails {
     id: string;

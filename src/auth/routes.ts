@@ -1,5 +1,6 @@
-import { ISignupTenantRequest, ISigninTenantRequest } from './auth.request';
-import { ISignupTenantResponse } from './auth.response';
+import { ISignupTenantRequest, ISigninTenantRequest } from './auth/request';
+import { ISignupTenantResponse } from './auth/response';
+import { ICheckDomainAvailabilityResponse } from './domain/response';
 
 /**
  * contains all routes related to auth service
@@ -43,4 +44,16 @@ export enum AUTH {
      * @method GET
      */
     CURRENT_USER = '/currentuser',
+
+    // domain related endpoints
+
+    /**
+     * check if requested domain is available or not.
+     *
+     * @method GET
+     * @query ?domain=<-domain-string->
+     * @type {ICheckDomainAvailabilityResponse} responseBody
+     *
+     */
+    CHECK_DOMAIN_AVAILABILITY = '/checkdomainavailability',
 }
