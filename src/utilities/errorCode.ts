@@ -6,6 +6,7 @@ export enum ERROR_CODE {
     DB_FAILURE = 3,
     VALIDATION_ERROR = 4,
     UNKNOWN_ERROR = 5,
+    NOT_FOUND = 6,
 
     /**
      * Auth Errors -> 1xxx
