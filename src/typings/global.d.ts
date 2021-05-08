@@ -1,4 +1,4 @@
-import { ITenantJWTToken } from '../utilities/common';
+import { IUserJwtTokenPayload } from '../utilities/common';
 
 declare global {
     namespace NodeJS {
@@ -14,7 +14,7 @@ declare global {
     }
     namespace Express {
         interface Request {
-            currentTenant?: ITenantJWTToken;
+            currentTenant?: IUserJwtTokenPayload;
         }
     }
 }
