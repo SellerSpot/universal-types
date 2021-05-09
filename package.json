@@ -16,7 +16,7 @@
         "husky:install": "husky install",
         "husky:pre-commit": "npm run lint-staged",
         "prepare": "npm run husky:install",
-        "update:pacakges": "npm i -D @sellerspot/webpack-run-scripts-custom-plugin"
+        "update:packages": "npm i -D @sellerspot/webpack-run-scripts-custom-plugin"
     },
     "repository": {
         "type": "git",
