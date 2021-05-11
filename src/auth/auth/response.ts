@@ -6,10 +6,17 @@ export interface IUserDetails {
     name: string;
 }
 
+export interface IDomainDetails {
+    domainName: string;
+    protocol: 'http' | 'https';
+    isCustomDomain: boolean;
+    appDomain: string;
+}
+
 export interface IStoreDetails {
     id: string;
     storeName: string;
-    domainName: string;
+    domainDetails: IDomainDetails;
 }
 
 export type IUserJwtTokenPayload = {
