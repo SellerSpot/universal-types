@@ -8,9 +8,8 @@ export interface IUserDetails {
 
 export interface IDomainDetails {
     domainName: string;
-    protocol: 'http' | 'https';
     isCustomDomain: boolean;
-    appDomain: string;
+    url: string;
 }
 
 export interface IStoreDetails {
@@ -43,5 +42,6 @@ export interface ISigninTenantResponse extends IResponse {
 export interface ICurrentUserResponse extends IResponse {
     data: {
         store: IStoreDetails;
+        user: IUserDetails;
     };
 }
