@@ -7,6 +7,8 @@ export * from './ecom';
 export * as ecomTypes from './ecom';
 export * from './pos';
 export * as posTypes from './pos';
+export * from './catalogue';
+export * as catalogueTypes from './catalogue';
 export { default as ROUTES } from './routes';
 // core utitlities
 export * from './utilities';
