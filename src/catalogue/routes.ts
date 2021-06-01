@@ -8,7 +8,7 @@ import {
     IEditCategoryResponse,
     IEditCategorySiblingOrderResponse,
     IGetCategoryResponse,
-    IListCategoryResponse,
+    IGetAllCategoryResponse,
 } from './category/response';
 
 export enum CATALOGUE {
@@ -22,7 +22,7 @@ export enum CATALOGUE {
     /** Category API starts here */
     /**
      * @method GET
-     * @type {IListCategoryResponse} responseBody
+     * @type {IGetAllCategoryResponse} responseBody
      */
     CATEGORY_LIST = '/categories',
 
