@@ -3,6 +3,7 @@
         "sourceMap": false,
         "noImplicitAny": true,
         "module": "CommonJS",
+        "preserveSymlinks": true,
         "target": "ES5",
         "lib": ["ESNext"],
         "removeComments": false,

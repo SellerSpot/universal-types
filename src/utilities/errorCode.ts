@@ -25,4 +25,10 @@ export enum ERROR_CODE {
     //Category
     CATEGORY_NOT_FOUND = 2001,
     CATEGORY_TITLE_INVALID = 2002,
+
+    /**
+     * Brand Errors -> 22**
+     */
+    //Brand
+    BRAND_NAME_INVALID = 2200,
 }

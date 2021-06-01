@@ -6,11 +6,8 @@
     "scripts": {
         "dev": "tsc-watch --onSuccess \"yalc push --no-scripts\"",
         "build": "webpack --mode production --env production",
-        "build:dev": "webpack --mode development --env production && yalc push",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
-        "yalc:link": "",
-        "yalc:remove": "yalc remove --all",
         "prettier": "prettier --write src",
         "lint-staged": "lint-staged",
         "husky:install": "husky install",
