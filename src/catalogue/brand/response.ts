@@ -5,10 +5,22 @@ interface IBrandData {
     name: string;
 }
 
-export interface IGetAllBrandsResponse extends IResponse {
+export interface IListBrandResponse extends IResponse {
+    data: IBrandData[];
+}
+
+export interface IGetBrandResponse extends IResponse {
     data: IBrandData[];
 }
 
 export interface ICreateBrandResponse extends IResponse {
-    data: null;
+    data: IBrandData;
+}
+
+export interface IEditBrandResponse extends IResponse {
+    data: IBrandData;
+}
+
+export interface IDeleteBrandResponse extends IResponse {
+    data: IBrandData;
 }

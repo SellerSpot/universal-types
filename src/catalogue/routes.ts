@@ -93,4 +93,27 @@ export enum CATALOGUE {
      */
     PRODUCT_DELETE = '/products/:id',
     /** Products API ends here */
+
+    /** Brands API starts here */
+    /**
+     * @method GET
+     */
+    BRAND_LIST = '/brands',
+    /**
+     * @method GET
+     */
+    BRAND_GET = '/brands/:id',
+    /**
+     * @method POST
+     */
+    BRAND_CREATE = '/brands',
+    /**
+     * @method PUT
+     */
+    BRAND_EDIT = '/brands/:id',
+    /**
+     * @method DELETE
+     */
+    BRAND_DELETE = '/brands/:id',
+    /** Brands API ends here */
 }
