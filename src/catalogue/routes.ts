@@ -1,3 +1,16 @@
+import {
+    ICreateCategoryRequest,
+    IEditCategoryRequest,
+    IEditCategorySiblingOrderRequest,
+} from './category/request';
+import {
+    ICreateCategoryResponse,
+    IEditCategoryResponse,
+    IEditCategorySiblingOrderResponse,
+    IGetCategoryResponse,
+    IListCategoryResponse,
+} from './category/response';
+
 export enum CATALOGUE {
     /**
      * catalogue server info
@@ -6,11 +19,12 @@ export enum CATALOGUE {
      */
     INFO = '/info',
 
+    /** Category API starts here */
     /**
      * @method GET
      * @type {IListCategoryResponse} responseBody
      */
-    CATAGORY_LIST = '/categories',
+    CATEGORY_LIST = '/categories',
 
     /**
      * @method GET
@@ -55,4 +69,28 @@ export enum CATALOGUE {
      * @pathparam catagoryid
      */
     CATAGORY_DELETE = '/categories/:id',
+    /** Category API ends here */
+
+    /** Products API starts here */
+    /**
+     * @method GET
+     */
+    PRODUCT_LIST = '/products',
+    /**
+     * @method GET
+     */
+    PRODUCT_GET = '/products/:id',
+    /**
+     * @method POST
+     */
+    PRODUCT_CREATE = '/products',
+    /**
+     * @method PUT
+     */
+    PRODUCT_EDIT = '/products/:id',
+    /**
+     * @method DELETE
+     */
+    PRODUCT_DELETE = '/products/:id',
+    /** Products API ends here */
 }
