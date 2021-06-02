@@ -1,10 +1,26 @@
 import { IResponse } from '../../utilities';
 
-interface IBrandData {
+export interface IBrandData {
     id: string;
     name: string;
 }
 
-export interface IGetAllBrandsResponse extends IResponse {
+export interface IGetAllBrandResponse extends IResponse {
     data: IBrandData[];
+}
+
+export interface IGetBrandResponse extends IResponse {
+    data: IBrandData[];
+}
+
+export interface ICreateBrandResponse extends IResponse {
+    data: IBrandData;
+}
+
+export interface IEditBrandResponse extends IResponse {
+    data: IBrandData;
+}
+
+export interface IDeleteBrandResponse extends IResponse {
+    data: IBrandData;
 }

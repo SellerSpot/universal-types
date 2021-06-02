@@ -1,4 +1,13 @@
 import { IResponse } from '../../utilities';
+export interface ICategory {
+    id: string;
+    title: string;
+    /**
+     * It will recursively contains its children
+     */
+    parentId?: string;
+    children?: ICategory[];
+}
 
 export interface ICreateCategoryResponse extends IResponse {
     data: {
@@ -10,32 +19,22 @@ export interface ICreateCategoryResponse extends IResponse {
         parentId?: string;
     };
 }
-export interface IListCategory {
-    id: string;
-    title: string;
-    /**
-     * It will recursively contains its children
-     */
-    parentId?: string;
-    children?: IListCategory[];
+export interface IGetAllCategoryResponse extends IResponse {
+    data: ICategory[];
 }
 
 export interface IGetCategoryResponse extends IResponse {
-    data: IListCategory;
-}
-
-export interface IListCategoryResponse extends IResponse {
-    data: IListCategory[];
+    data: ICategory;
 }
 
 export interface IEditCategorySiblingOrderResponse extends IResponse {
-    data: IListCategory;
+    data: ICategory;
 }
 
 export interface IEditCategoryPositionResponse extends IResponse {
-    data: IListCategory;
+    data: ICategory;
 }
 
 export interface IEditCategoryResponse extends IResponse {
-    data: IListCategory;
+    data: ICategory;
 }
