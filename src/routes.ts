@@ -20,7 +20,7 @@ enum SERVICE {
     /**
      * core will be the base route
      */
-    CORE = '',
+    CORE = '/core',
 }
 
 export default {

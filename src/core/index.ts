@@ -1,2 +1,1 @@
-// routes exports
-export * as coreRoutes from './routes';
+export const kill = '';

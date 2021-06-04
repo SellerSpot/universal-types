@@ -1,13 +1,11 @@
 /**
- * Holds the major routes for the server
+ * contains all routes related to core service
  */
 export enum CORE {
     /**
-     * typedoc should be in this format
+     * core server info
      *
-     * @request  POST | GET | PUT | DELETE
-     * @type {typeofthereq} requestBody
-     * @type {typeoftheres} responseBody
+     * @method GET
      */
-    DUMMY = 'delete me when adding first route here',
+    INFO = '/info',
 }
