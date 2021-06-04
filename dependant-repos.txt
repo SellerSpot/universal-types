@@ -1,5 +1,7 @@
 universal-functions
 database-models
 auth-server
+core-server
+catalogue-server
 accounts-app
 core-app
