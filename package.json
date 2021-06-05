@@ -8,6 +8,8 @@
         "build": "webpack --mode production --env production",
         "lint": "eslint src",
         "lint:fix": "eslint src --fix",
+        "yalc:link": "",
+        "yalc:remove": "yalc remove --all",
         "prettier": "prettier --write src",
         "lint-staged": "lint-staged",
         "husky:install": "husky install",
