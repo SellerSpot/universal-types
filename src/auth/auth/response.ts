@@ -10,6 +10,10 @@ export interface IDomainDetails {
     domainName: string;
     isCustomDomain: boolean;
     url: string;
+    /**
+     * exact name of the domain, without prefixed/suffixed scope
+     */
+    name: string;
 }
 
 export interface IStoreDetails {
