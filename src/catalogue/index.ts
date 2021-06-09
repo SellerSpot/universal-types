@@ -8,3 +8,7 @@ export * from './category/response';
 // brand export
 export * from './brand/request';
 export * from './brand/response';
+
+//Tax-Bracket
+export * from './tax-bracket/request';
+export * from './tax-bracket/response';
