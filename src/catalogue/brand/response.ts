@@ -10,7 +10,7 @@ export interface IGetAllBrandResponse extends IResponse {
 }
 
 export interface IGetBrandResponse extends IResponse {
-    data: IBrandData[];
+    data: IBrandData;
 }
 
 export interface ICreateBrandResponse extends IResponse {
