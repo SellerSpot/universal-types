@@ -1,13 +1,8 @@
-/**
- * Holds the major routes for the server
- */
 export enum ECOM {
     /**
-     * typedoc should be in this format
+     * ecom server info
      *
-     * @request  POST | GET | PUT | DELETE
-     * @type {typeofthereq} requestBody
-     * @type {typeoftheres} responseBody
+     * @method GET
      */
-    DUMMY = 'delete me when adding first route here',
+    INFO = '/info',
 }

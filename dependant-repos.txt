@@ -1,7 +1,9 @@
 universal-functions
 database-models
+accounts-app
+core-app
 auth-server
 core-server
 catalogue-server
-accounts-app
-core-app
+ecom-server
+pos-server
