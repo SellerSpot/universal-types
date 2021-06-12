@@ -1,12 +1,12 @@
 import { IResponse } from '../../utilities';
-export interface ICategory {
+export interface ICategoryData {
     id: string;
     title: string;
     /**
      * It will recursively contains its children
      */
     parentId?: string;
-    children?: ICategory[];
+    children?: ICategoryData[];
 }
 
 export interface ICreateCategoryResponse extends IResponse {
@@ -20,21 +20,21 @@ export interface ICreateCategoryResponse extends IResponse {
     };
 }
 export interface IGetAllCategoryResponse extends IResponse {
-    data: ICategory[];
+    data: ICategoryData[];
 }
 
 export interface IGetCategoryResponse extends IResponse {
-    data: ICategory;
+    data: ICategoryData;
 }
 
 export interface IEditCategorySiblingOrderResponse extends IResponse {
-    data: ICategory;
+    data: ICategoryData;
 }
 
 export interface IEditCategoryPositionResponse extends IResponse {
-    data: ICategory;
+    data: ICategoryData;
 }
 
 export interface IEditCategoryResponse extends IResponse {
-    data: ICategory;
+    data: ICategoryData;
 }
