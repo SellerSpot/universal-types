@@ -1,33 +1,50 @@
 export enum ERROR_CODE {
     //General Errors & Internal Server Error
 
-    OPERATION_FAILURE = 1,
-    AUTH_FAILURE = 2,
-    DB_FAILURE = 3,
-    VALIDATION_ERROR = 4,
-    UNKNOWN_ERROR = 5,
-    NOT_FOUND = 6,
+    OPERATION_FAILURE,
+    AUTH_FAILURE,
+    DB_FAILURE,
+    VALIDATION_ERROR,
+    UNKNOWN_ERROR,
+    NOT_FOUND,
 
     /**
      * Auth Errors -> 1xxx
      */
     //Tenant Sign Up
-    DOMAIN_ALREADY_EXIST = 1001,
-    TENANT_ALREADY_EXIST = 1002,
-    TENANT_NOT_CREATED = 1003,
-    NOT_AUTHENTICATED_USER = 1004,
-    TENANT_INVALID = 1005,
-    INVALID_TOKEN = 1006,
+    DOMAIN_ALREADY_EXIST,
+    TENANT_ALREADY_EXIST,
+    TENANT_NOT_CREATED,
+    NOT_AUTHENTICATED_USER,
+    TENANT_INVALID,
+    INVALID_TOKEN,
 
     /**
      * Catalogue Errors -> 2xxx
      */
     //Category
-    CATEGORY_NOT_FOUND = 2001,
-    CATEGORY_TITLE_INVALID = 2002,
+    CATEGORY_NOT_FOUND,
+    CATEGORY_TITLE_INVALID,
     //Brand
-    BRAND_NAME_INVALID = 2200,
+    BRAND_NAME_INVALID,
     //TaxBracket
-    TAX_BRACKET_NAME_INVALID = 2300,
-    TAX_GROUP_INVALID_BRACKET = 2301,
+    TAX_BRACKET_NAME_INVALID,
+    TAX_GROUP_INVALID_BRACKET,
+
+    // plugin
+    INVALID_PLUGIN,
 }
+
+export type TErrorCodeKeys = keyof typeof ERROR_CODE;
+
+export const ERROR_CODE_KEYS = <TErrorCodeKeys[]>Object.keys(ERROR_CODE);
+
+export const ERROR_CODE_VALUES = Object.values(ERROR_CODE);
+
+export const ERROR_CODE_VALUE_KEY = ERROR_CODE_VALUES.reduce(
+    (resultObj, currentValue, currentIndex) => {
+        resultObj[currentValue as string] = ERROR_CODE_KEYS[currentIndex];
+        return resultObj;
+    },
+    {} as { [key: string]: TErrorCodeKeys },
+);

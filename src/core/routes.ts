@@ -1,5 +1,7 @@
 import { IDomainUpdateRequest } from './domain/request';
 import { IDomainUpdateResponse } from './domain/response';
+import { IInstallPluginRequest } from './plugin/request';
+import { IGetAllPluginsResponse, IInstallPluginResponse } from './plugin/response';
 
 /**
  * contains all routes related to core service
@@ -28,4 +30,19 @@ export enum CORE {
      * @type {IDomainUpdateResponse} responseBody
      */
     UPDATE_DOMAIN = '/updatedomain',
+
+    // plugin related routes
+    /**
+     * gives all available plugins
+     * @method GET
+     * @type {IGetAllPluginsResponse} responseBody
+     */
+    GET_ALL_PLUGINS = '/allplugins',
+    /**
+     * installs a plugin for the current tenant
+     * @method POST
+     * @type {IInstallPluginRequest} requestBody
+     * @type {IInstallPluginResponse} responseBody
+     */
+    INSTALL_PLUGIN = '/installplugin',
 }
