@@ -1,9 +1,10 @@
-import { ERROR_CODE } from './errorCode';
+import { ERROR_CODE, TErrorCodeKeys } from './errorCode';
 /**
  * Typings for error in API response
  */
 export interface IErrorResponse {
     code: ERROR_CODE;
+    key?: TErrorCodeKeys;
     message?: string;
     errors?: { name: string; message: string }[];
 }
