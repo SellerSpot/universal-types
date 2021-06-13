@@ -12,3 +12,7 @@ export * from './brand/response';
 //Tax-Bracket
 export * from './tax-bracket/request';
 export * from './tax-bracket/response';
+
+//Product Request
+export * from './product/request';
+export * from './product/response';
