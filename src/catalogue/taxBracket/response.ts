@@ -13,23 +13,15 @@ export interface ITaxGroupData {
     bracket: ITaxBracketData[];
 }
 
-export interface IGetTaxBracketResponse extends IResponse {
+export interface ITaxBracketResponse extends IResponse {
     data: ITaxBracketData;
 }
 
-export interface IEditTaxBracketResponse extends IResponse {
-    data: ITaxBracketData;
-}
-
-export interface IGetTaxGroupResponse extends IResponse {
+export interface ITaxGroupResponse extends IResponse {
     data: ITaxGroupData;
 }
 
-export interface IEditTaxGroupResponse extends IResponse {
-    data: ITaxGroupData;
-}
-
-export interface IGetAllTaxsResponse extends IResponse {
+export interface IGetAllTaxBracketResponse extends IResponse {
     data: {
         brackets: ITaxBracketData[];
         groups: ITaxGroupData[];

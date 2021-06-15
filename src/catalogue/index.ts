@@ -10,8 +10,8 @@ export * from './brand/request';
 export * from './brand/response';
 
 //Tax-Bracket
-export * from './tax-bracket/request';
-export * from './tax-bracket/response';
+export * from './taxBracket/request';
+export * from './taxBracket/response';
 
 //Product Request
 export * from './product/request';
