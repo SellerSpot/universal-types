@@ -7,6 +7,7 @@ export enum ERROR_CODE {
     VALIDATION_ERROR,
     UNKNOWN_ERROR,
     NOT_FOUND,
+    INVALID_JSON,
 
     /**
      * Auth Errors -> 1xxx
@@ -27,6 +28,7 @@ export enum ERROR_CODE {
     CATEGORY_TITLE_INVALID,
     //Brand
     BRAND_NAME_INVALID,
+    BRAND_NOT_FOUND,
     //TaxBracket
     TAX_BRACKET_NAME_INVALID,
     TAX_GROUP_INVALID_BRACKET,

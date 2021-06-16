@@ -1,7 +1,7 @@
 export interface IProductRequest {
     name: string;
-    barcode?: number;
+    barcode?: string;
+    description?: string;
     brand?: string;
     category?: string;
-    parentId?: string;
 }
