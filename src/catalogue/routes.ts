@@ -98,11 +98,12 @@ export enum CATALOGUE {
     /**
      * @method GET
      */
-    BRAND_LIST = '/brands',
+    BRAND_GET = '/brands/:id',
     /**
      * @method GET
      */
-    BRAND_GET = '/brands/:id',
+    BRAND_LIST = '/brands',
+    /**
     /**
      * @method POST
      */
@@ -116,4 +117,23 @@ export enum CATALOGUE {
      */
     BRAND_DELETE = '/brands/:id',
     /** Brands API ends here */
+
+    /** Tax Bracket & Groups API starts here */
+    /**
+     * @method POST
+     */
+    TAX_BRACKET_CREATE = '/taxbrackets',
+    /**
+     * @method GET
+     */
+    TAX_BRACKET_GET = '/taxbrackets/:id',
+    /**
+     * @method GET
+     */
+    TAX_BRACKET_LIST = '/taxbrackets',
+    /**
+     * @method POST
+     */
+    TAX_GROUP_CREATE = '/taxbrackets/groups',
+    /** Tax Bracket & Groups API ends here */
 }
