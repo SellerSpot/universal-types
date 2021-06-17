@@ -3,6 +3,7 @@ import { IResponse } from '../../utilities';
 export interface IPlugin {
     id: string;
     name: string;
+    uniqueName: string;
     shortDescription: string;
     longDescription: string;
     image: string;
@@ -19,7 +20,13 @@ export interface IInstalledPlugin {
 export interface IGetAllPluginsResponse extends IResponse {
     data: IPlugin[];
 }
+export interface IGetPluginDetailsByIdResponse extends IResponse {
+    data: IPlugin;
+}
 
 export interface IInstallPluginResponse extends IResponse {
+    data: IInstalledPlugin[];
+}
+export interface IUnInstallPluginResponse extends IResponse {
     data: IInstalledPlugin[];
 }

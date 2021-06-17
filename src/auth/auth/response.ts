@@ -1,3 +1,4 @@
+import { IInstalledPlugin } from '../../core';
 import { IResponse } from '../../utilities';
 
 export interface IUserDetails {
@@ -20,6 +21,7 @@ export interface IStoreDetails {
     id: string;
     storeName: string;
     domainDetails: IDomainDetails;
+    installedPlugins: IInstalledPlugin[];
 }
 
 export type IUserJwtTokenPayload = {

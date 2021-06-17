@@ -34,19 +34,6 @@ export enum ERROR_CODE {
     TAX_GROUP_INVALID_BRACKET,
 
     // plugin
-    INVALID_PLUGIN,
+    PLUGIN_INVALID,
+    PLUGIN_ALREADY_INSTALLED,
 }
-
-export type TErrorCodeKeys = keyof typeof ERROR_CODE;
-
-export const ERROR_CODE_KEYS = <TErrorCodeKeys[]>Object.keys(ERROR_CODE);
-
-export const ERROR_CODE_VALUES = Object.values(ERROR_CODE);
-
-export const ERROR_CODE_VALUE_KEY = ERROR_CODE_VALUES.reduce(
-    (resultObj, currentValue, currentIndex) => {
-        resultObj[currentValue as string] = ERROR_CODE_KEYS[currentIndex];
-        return resultObj;
-    },
-    {} as { [key: string]: TErrorCodeKeys },
-);

@@ -1,7 +1,16 @@
 import { IDomainUpdateRequest } from './domain/request';
 import { IDomainUpdateResponse } from './domain/response';
-import { IInstallPluginRequest } from './plugin/request';
-import { IGetAllPluginsResponse, IInstallPluginResponse } from './plugin/response';
+import {
+    IGetPluginDetailByIdRequest,
+    IInstallPluginRequest,
+    IUnInstallPluginRequest,
+} from './plugin/request';
+import {
+    IGetAllPluginsResponse,
+    IGetPluginDetailsByIdResponse,
+    IInstallPluginResponse,
+    IUnInstallPluginResponse,
+} from './plugin/response';
 
 /**
  * contains all routes related to core service
@@ -37,12 +46,26 @@ export enum CORE {
      * @method GET
      * @type {IGetAllPluginsResponse} responseBody
      */
-    GET_ALL_PLUGINS = '/allplugins',
+    GET_ALL_PLUGINS = '/plugins',
     /**
-     * installs a plugin for the current tenant
+     * get plugin details by id
+     * @method GET
+     * @type {IGetPluginDetailByIdRequest} - paramBody
+     * @type {IGetPluginDetailsByIdResponse} responseBody
+     */
+    GET_PLUGIN_DETAILS_BY_ID = '/plugins/:id',
+    /**
+     * Installs a plugin for the current tenant
      * @method POST
-     * @type {IInstallPluginRequest} requestBody
+     * @type {IInstallPluginRequest} paramBody
      * @type {IInstallPluginResponse} responseBody
      */
-    INSTALL_PLUGIN = '/installplugin',
+    INSTALL_PLUGIN = '/plugins/:id/install',
+    /**
+     * Uninstalls a plugin for the current tenant
+     * @method DELETE
+     * @type {IUnInstallPluginRequest} paramBody
+     * @type {IUnInstallPluginResponse} responseBody
+     */
+    UNINSTALL_PLUGIN = '/plugins/:id/uninstall',
 }
