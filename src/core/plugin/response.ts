@@ -1,14 +1,16 @@
 import { IResponse } from '../../utilities';
 
 export interface IPlugin {
-    id: string;
+    pluginId: string;
     name: string;
-    uniqueName: string;
+    isVisibleInPluginMenu: boolean;
+    isVisibleInPluginStore: boolean;
+    dependantPlugins: string[] | IPlugin[];
     shortDescription: string;
     longDescription: string;
+    icon: string;
     image: string;
     bannerImages: string[];
-    iconName: string;
 }
 
 export interface IInstalledPlugin {
