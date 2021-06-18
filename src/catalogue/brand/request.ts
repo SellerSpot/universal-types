@@ -3,5 +3,6 @@ export interface ICreateBrandRequest {
 }
 
 export interface IEditBrandRequest {
+    id: string;
     name: string;
 }
