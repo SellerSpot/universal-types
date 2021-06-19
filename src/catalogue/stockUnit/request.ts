@@ -2,6 +2,4 @@ export interface ICreateStockUnitRequest {
     name: string;
 }
 
-export interface IEditStockUnitRequest {
-    name: string;
-}
+export type IEditStockUnitRequest = ICreateStockUnitRequest;

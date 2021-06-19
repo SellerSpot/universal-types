@@ -56,7 +56,7 @@ export enum CATEGORY {
      * @type {IEditCategoryPositionRequest} requestBody
      * @type {IEditCategoryPositionResponse} responseBody
      */
-    EDIT_CATEGORY_POSITION = '/categories/:id/position',
+    EDIT_POSITION = '/categories/:id/position',
 
     /**
      * @method DELETE
