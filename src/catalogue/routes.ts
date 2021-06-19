@@ -136,4 +136,28 @@ export enum CATALOGUE {
      */
     TAX_GROUP_CREATE = '/taxbrackets/groups',
     /** Tax Bracket & Groups API ends here */
+
+    /** Stock Unit API starts here */
+    /**
+     * @method GET
+     */
+    STOCK_UNIT_GET = '/stockunits/:id',
+    /**
+     * @method GET
+     */
+    STOCK_UNIT_LIST = '/stockunits',
+    /**
+     /**
+      * @method POST
+      */
+    STOCK_UNIT_CREATE = '/stockunits',
+    /**
+     * @method PUT
+     */
+    STOCK_UNIT_EDIT = '/stockunits/:id',
+    /**
+     * @method DELETE
+     */
+    STOCK_UNIT_DELETE = '/stockunits/:id',
+    /** Stock Unit API ends here */
 }

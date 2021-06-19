@@ -9,9 +9,6 @@ export enum ERROR_CODE {
     NOT_FOUND,
     INVALID_JSON,
 
-    /**
-     * Auth Errors -> 1xxx
-     */
     //Tenant Sign Up
     DOMAIN_ALREADY_EXIST,
     TENANT_ALREADY_EXIST,
@@ -20,9 +17,6 @@ export enum ERROR_CODE {
     TENANT_INVALID,
     INVALID_TOKEN,
 
-    /**
-     * Catalogue Errors -> 2xxx
-     */
     //Category
     CATEGORY_NOT_FOUND,
     CATEGORY_TITLE_INVALID,
@@ -32,6 +26,8 @@ export enum ERROR_CODE {
     //TaxBracket
     TAX_BRACKET_NAME_INVALID,
     TAX_GROUP_INVALID_BRACKET,
+    //Stock Unit
+    STOCK_UNIT_NAME_INVALID,
 
     // plugin
     PLUGIN_INVALID,

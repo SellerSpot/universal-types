@@ -14,14 +14,6 @@ export interface IGetStockUnitResponse extends IResponse {
     data: IStockUnitData;
 }
 
-export interface ICreateStockUnitResponse extends IResponse {
-    data: IStockUnitData;
-}
+export type ICreateStockUnitResponse = IGetStockUnitResponse;
 
-export interface IEditStockUnitResponse extends IResponse {
-    data: IStockUnitData;
-}
-
-export interface IDeleteStockUnitResponse extends IResponse {
-    data: IStockUnitData;
-}
+export type IEditStockUnitResponse = IGetStockUnitResponse;
