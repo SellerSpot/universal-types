@@ -18,7 +18,7 @@ export enum CATEGORY {
      * @method GET
      * @type {IGetAllCategoryResponse} responseBody
      */
-    LIST = '/categories',
+    GET_ALL = '/categories',
 
     /**
      * @method GET
