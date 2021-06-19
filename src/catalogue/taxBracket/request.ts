@@ -1,9 +1,15 @@
-export interface ITaxBracketRequest {
+interface ITaxBracketRequest {
     name: string;
     rate: number;
 }
 
-export interface ITaxGroupRequest {
+interface ITaxGroupRequest {
     name: string;
     bracket: string[];
 }
+
+export type ICreateTaxBracketRequest = ITaxBracketRequest;
+export type IEditTaxBracketRequest = ITaxBracketRequest;
+
+export type ICreateTaxGroupRequest = ITaxGroupRequest;
+export type IEditTaxGroupRequest = ITaxGroupRequest;

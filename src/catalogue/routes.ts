@@ -24,7 +24,7 @@ export enum CATALOGUE {
      * @method GET
      * @type {IGetAllCategoryResponse} responseBody
      */
-    CATEGORY_LIST = '/categories',
+    CATEGORY_GET_ALL = '/categories',
 
     /**
      * @method GET
@@ -75,7 +75,7 @@ export enum CATALOGUE {
     /**
      * @method GET
      */
-    PRODUCT_LIST = '/products',
+    PRODUCT_GET_ALL = '/products',
     /**
      * @method GET
      */
@@ -102,7 +102,7 @@ export enum CATALOGUE {
     /**
      * @method GET
      */
-    BRAND_LIST = '/brands',
+    BRAND_GET_ALL = '/brands',
     /**
     /**
      * @method POST
@@ -130,7 +130,7 @@ export enum CATALOGUE {
     /**
      * @method GET
      */
-    TAX_BRACKET_LIST = '/taxbrackets',
+    TAX_BRACKET_GET_ALL = '/taxbrackets',
     /**
      * @method POST
      */

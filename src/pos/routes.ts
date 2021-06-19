@@ -17,7 +17,7 @@ export enum POS {
      * @description list all products in inventory
      * @method GET
      */
-    INVENTORY_LIST = '/inventories',
+    INVENTORY_GET_ALL = '/inventories',
 
     /**
      * @description update product - inventory details
