@@ -1,8 +1,8 @@
-import { AUTH } from './auth/routes';
-import { CATALOGUE } from './catalogue/routes';
-import { CORE } from './core/routes';
-import { ECOM } from './ecom/routes';
-import { POS } from './pos/routes';
+import * as AUTH from './auth/routes';
+import * as CORE from './core/routes';
+import * as CATALOGUE from './catalogue/routes';
+import * as ECOM from './ecom/routes';
+import * as POS from './pos/routes';
 
 enum SERVICE {
     /**
@@ -25,27 +25,62 @@ enum SERVICE {
 
 export default {
     /**
-     * Contains all services
+     * Contains all service base routes
      */
     SERVICE,
     /**
-     * Contains all auth related services
+     * Contains all auth related routes
      */
-    AUTH,
+    AUTH: {
+        /**
+         * auth server info
+         * @method GET
+         */
+        INFO: '/info',
+        ...AUTH,
+    },
     /**
-     * Contains all catalogue related services
+     * Contains all catalogue related routes
      */
-    CATALOGUE,
+    CATALOGUE: {
+        /**
+         * catalogue server info
+         * @method GET
+         */
+        INFO: '/info',
+        ...CATALOGUE,
+    },
     /**
-     * Contains all core related services
+     * Contains all core related routes
      */
-    CORE,
+    CORE: {
+        /**
+         * core server info
+         * @method GET
+         */
+        INFO: '/info',
+        ...CORE,
+    },
     /**
-     * Contains all ecom related services
+     * Contains all ecom related routes
      */
-    ECOM,
+    ECOM: {
+        /**
+         * ecom server info
+         * @method GET
+         */
+        INFO: '/info',
+        ...ECOM,
+    },
     /**
-     * Contains all pos related services
+     * Contains all pos related routes
      */
-    POS,
+    POS: {
+        /**
+         * pos server info
+         * @method GET
+         */
+        INFO: '/info',
+        ...POS,
+    },
 };
