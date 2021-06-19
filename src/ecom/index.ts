@@ -1,2 +1,1 @@
-// routes exports
-export * as ecomRoutes from './routes';
+export const dummy = '';
