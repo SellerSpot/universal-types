@@ -11,6 +11,10 @@ export interface IPlugin {
     icon: string;
     image: string;
     bannerImages: string[];
+    /**
+     * use pluginId
+     */
+    id?: string;
 }
 
 export interface IInstalledPlugin {
