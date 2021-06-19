@@ -6,7 +6,7 @@ export enum BRAND {
     /**
      * @method GET
      */
-    LIST = '/brands',
+    GET_ALL = '/brands',
     /**
      /**
       * @method POST

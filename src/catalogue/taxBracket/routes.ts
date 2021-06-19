@@ -10,7 +10,7 @@ export enum TAX_BRACKET {
     /**
      * @method GET
      */
-    LIST = '/taxbrackets',
+    GET_ALL = '/taxbrackets',
     /**
      * @method POST
      */

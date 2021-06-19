@@ -2,7 +2,7 @@ export enum PRODUCT {
     /**
      * @method GET
      */
-    LIST = '/products',
+    GET_ALL = '/products',
     /**
      * @method GET
      */

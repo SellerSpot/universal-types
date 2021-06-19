@@ -6,7 +6,7 @@ export enum STOCK_UNIT {
     /**
      * @method GET
      */
-    LIST = '/stockunits',
+    GET_ALL = '/stockunits',
     /**
       /**
        * @method POST
