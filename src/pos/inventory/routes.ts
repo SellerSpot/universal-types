@@ -10,7 +10,7 @@ export enum INVENTORY {
      * list all products in inventory
      * @method GET
      */
-    LIST = '/inventory',
+    GET_ALL = '/inventory',
 
     /**
      * update product - inventory details
