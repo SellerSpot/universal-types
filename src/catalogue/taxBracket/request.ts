@@ -1,9 +1,9 @@
-interface ITaxBracketRequest {
+export interface ITaxBracketRequest {
     name: string;
     rate: number;
 }
 
-interface ITaxGroupRequest {
+export interface ITaxGroupRequest {
     name: string;
     bracket: string[];
 }
