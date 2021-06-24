@@ -10,3 +10,7 @@ export interface IStoreCurrency {
 export interface IGetAllStoreCurrenciesResponse extends IResponse {
     data: IStoreCurrency[];
 }
+
+export interface IUpdateStoreCurrencyResponse extends IResponse {
+    data: IStoreCurrency;
+}
