@@ -1,7 +1,11 @@
 import { IResponse } from '../../utilities';
 
 export interface IPlugin {
-    pluginId: string;
+    /**
+     * custom id, which could be formed via uniqueName via same object, through sha1 hash 24  characters digest
+     */
+    id: string;
+    uniqueName: string;
     name: string;
     isVisibleInPluginMenu: boolean;
     isVisibleInPluginStore: boolean;
@@ -11,10 +15,6 @@ export interface IPlugin {
     icon: string;
     image: string;
     bannerImages: string[];
-    /**
-     * use pluginId
-     */
-    id?: string;
 }
 
 export interface IInstalledPlugin {
