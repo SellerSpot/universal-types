@@ -7,6 +7,6 @@ export type ArgumentsType<T extends (...args: any[]) => any> = T extends (...arg
     ? A
     : never;
 
-export interface IAppContext {
-    tenantId: string;
+export interface ICommonResourcePathParam {
+    id: string;
 }

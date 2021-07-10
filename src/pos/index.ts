@@ -1,1 +1,3 @@
-export const dummyPosExport = '';
+// routes exports
+
+export * from './inventory/request';

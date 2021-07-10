@@ -4,23 +4,23 @@ export enum INVENTORY {
      * with existing product) or **product** (creates new product and maps inventory details)
      * @method POST
      */
-    ADD = '/inventory',
+    CREATE = '/inventories',
 
     /**
      * list all products in inventory
      * @method GET
      */
-    GET_ALL = '/inventory',
+    GET_ALL = '/inventories',
 
     /**
      * update product - inventory details
      * @method PUT
      */
-    EDIT = '/inventory/:id',
+    EDIT = '/inventories/:id',
 
     /**
      * delete product from inventory
      * @method DELETE
      */
-    DELETE = '/inventory',
+    DELETE = '/inventories',
 }
