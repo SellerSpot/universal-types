@@ -5,6 +5,10 @@ export interface IProductData {
     name: string;
     barcode?: string;
     description?: string;
+    stockUnit?: {
+        id: string;
+        name: string;
+    };
     brand?: {
         id: string;
         name: string;
@@ -16,4 +20,8 @@ export interface IProductData {
 }
 export interface IProductResponse extends IResponse {
     data: IProductData;
+}
+
+export interface IGetAllProductResponse extends IResponse {
+    data: IProductData[];
 }

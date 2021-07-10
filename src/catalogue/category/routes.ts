@@ -1,18 +1,3 @@
-import {
-    ICreateCategoryRequest,
-    IEditCategoryPositionRequest,
-    IEditCategoryRequest,
-    IEditCategorySiblingOrderRequest,
-} from './request';
-import {
-    ICreateCategoryResponse,
-    IEditCategoryPositionResponse,
-    IEditCategoryResponse,
-    IEditCategorySiblingOrderResponse,
-    IGetAllCategoryResponse,
-    IGetCategoryResponse,
-} from './response';
-
 export enum CATEGORY {
     /**
      * @method GET
@@ -22,7 +7,7 @@ export enum CATEGORY {
 
     /**
      * @method GET
-     * @pathparam catagoryid
+     * @type {ICommonResourcePathParam} pathParams
      * @type {IGetCategoryResponse} responseBody
      */
     GET = '/categories/:id',
@@ -36,7 +21,7 @@ export enum CATEGORY {
 
     /**
      * @method PUT
-     * @pathparam catagoryid
+     * @type {ICommonResourcePathParam} pathParams
      * @type {IEditCategoryRequest} requestBody
      * @type {IEditCategoryResponse} responseBody
      */
@@ -44,7 +29,7 @@ export enum CATEGORY {
 
     /**
      * @method PUT
-     * @pathparam {catagoryid} parent id of the sibling should be sent
+     * @type {ICommonResourcePathParam} pathParams
      * @type {IEditCategorySiblingOrderRequest} requestBody
      * @type {IEditCategorySiblingOrderResponse} responseBody
      */
@@ -52,7 +37,7 @@ export enum CATEGORY {
 
     /**
      * @method PUT
-     * @pathparam catagoryid
+     * @type {ICommonResourcePathParam} pathParams
      * @type {IEditCategoryPositionRequest} requestBody
      * @type {IEditCategoryPositionResponse} responseBody
      */
@@ -60,7 +45,7 @@ export enum CATEGORY {
 
     /**
      * @method DELETE
-     * @pathparam catagoryid
+     * @type {ICommonResourcePathParam} pathParams
      */
     DELETE = '/categories/:id',
 }

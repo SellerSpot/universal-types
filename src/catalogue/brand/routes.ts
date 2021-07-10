@@ -9,27 +9,30 @@ import {
 export enum BRAND {
     /**
      * @method GET
-     * @type {IGetBrandResponse} - responseBody
+     * @type { IGetBrandResponse } responseBody
      */
     GET = '/brands/:id',
     /**
      * @method GET
-     * @type {IGetAllBrandResponse} - responseBody
+     * @type { ICommonResourcePathParam } pathParams
+     * @type { IGetAllBrandResponse } responseBody
      */
     GET_ALL = '/brands',
     /**
      * @method POST
-     * @type {ICreateBrandRequest} - requestBody
-     * @type {ICreateBrandResponse} - responseBody
+     * @type { ICreateBrandRequest } requestBody
+     * @type { ICreateBrandResponse } responseBody
      */
     CREATE = '/brands',
     /**
      * @method PUT
-     * @type {IEditBrandRequest} - requestBody
-     * @type {IEditBrandResponse} - responseBody
+     * @type { ICommonResourcePathParam } pathParams
+     * @type { IEditBrandRequest } requestBody
+     * @type { IEditBrandResponse } requestBody
      */
     EDIT = '/brands/:id',
     /**
+     * @type { ICommonResourcePathParam } pathParams
      * @method DELETE
      * @type {IDeleteBrandResponse} - responseBody
      */

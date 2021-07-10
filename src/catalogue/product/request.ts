@@ -4,4 +4,7 @@ export interface IProductRequest {
     description?: string;
     brand?: string;
     category?: string;
+    stockUnit?: string;
 }
+
+export type IEditProductRequest = Partial<IProductRequest>;
