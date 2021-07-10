@@ -1,3 +1,11 @@
+import { ICreateBrandRequest, IEditBrandRequest } from './request';
+import {
+    ICreateBrandResponse,
+    IEditBrandResponse,
+    IGetAllBrandResponse,
+    IGetBrandResponse,
+} from './response';
+
 export enum BRAND {
     /**
      * @method GET
@@ -26,6 +34,7 @@ export enum BRAND {
     /**
      * @type { ICommonResourcePathParam } pathParams
      * @method DELETE
+     * @type {IDeleteBrandResponse} - responseBody
      */
     DELETE = '/brands/:id',
 }

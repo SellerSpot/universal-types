@@ -1,4 +1,5 @@
 import { IInstalledPlugin } from '../../core';
+import { IStoreCurrency } from '../../core/storeCurrency/response';
 import { IResponse } from '../../utilities';
 
 export interface IUserDetails {
@@ -22,6 +23,7 @@ export interface IStoreDetails {
     storeName: string;
     domainDetails: IDomainDetails;
     installedPlugins: IInstalledPlugin[];
+    storeCurrency: IStoreCurrency;
 }
 
 export type IUserJwtTokenPayload = {
