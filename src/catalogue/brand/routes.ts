@@ -32,8 +32,8 @@ export enum BRAND {
      */
     EDIT = '/brands/:id',
     /**
-     * @type { ICommonResourcePathParam } pathParams
      * @method DELETE
+     * @type { ICommonResourcePathParam } pathParams
      * @type {IDeleteBrandResponse} - responseBody
      */
     DELETE = '/brands/:id',
