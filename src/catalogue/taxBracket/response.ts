@@ -21,13 +21,6 @@ interface ITaxGroupResponse extends IResponse {
     data: ITaxGroupData;
 }
 
-export interface IGetAllTaxDataResponse extends IResponse {
-    data: {
-        brackets: ITaxBracketData[];
-        groups: ITaxGroupData[];
-    };
-}
-
 // tax bracket
 export interface IGetAllTaxBracketResponse extends IResponse {
     data: ITaxBracketData[];
