@@ -1,3 +1,7 @@
+export interface IEditChildrenOrderPathParam {
+    parentId: string;
+}
+
 export enum CATEGORY {
     /**
      * @method GET
@@ -29,11 +33,11 @@ export enum CATEGORY {
 
     /**
      * @method PUT
-     * @type {ICommonResourcePathParam} pathParams
-     * @type {IEditCategorySiblingOrderRequest} requestBody
-     * @type {IEditCategorySiblingOrderResponse} responseBody
+     * @type {IEditChildrenOrderPathParam} pathParams
+     * @type {IEditCategoryChildrenOrderRequest} requestBody
+     * @type {IEditCategoryChildrenOrderResponse} responseBody
      */
-    EDIT_SIBLING_ORDER = '/categories/:id/siblingorder',
+    EDIT_CHILDREN_ORDER = '/categories/:parentid/childrenorder',
 
     /**
      * @method PUT
