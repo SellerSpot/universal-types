@@ -6,8 +6,8 @@ export interface ICreateCategoryRequest {
     parentId?: string;
 }
 
-export interface IEditCategorySiblingOrderRequest {
-    siblingOrder: string[];
+export interface IEditCategoryChildrenOrderRequest {
+    childrenOrder: string[];
 }
 
 export interface IEditCategoryPositionRequest {
