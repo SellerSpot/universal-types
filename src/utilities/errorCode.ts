@@ -22,15 +22,19 @@ export enum ERROR_CODE {
     //Brand
     BRAND_NAME_INVALID,
     BRAND_NOT_FOUND,
+
     //TaxBracket
     TAX_BRACKET_NAME_INVALID,
     TAX_GROUP_INVALID_BRACKET,
     TAX_BRACKET_INVALID,
+
     //Stock Unit
     STOCK_UNIT_NAME_INVALID,
     STOCK_UNIT_NOT_FOUND,
+
     //Product
     PRODUCT_NOT_FOUND,
+
     // plugin
     PLUGIN_INVALID,
     PLUGIN_ALREADY_INSTALLED,

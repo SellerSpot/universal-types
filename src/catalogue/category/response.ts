@@ -27,7 +27,7 @@ export interface IGetCategoryResponse extends IResponse {
     data: ICategoryData;
 }
 
-export interface IEditCategorySiblingOrderResponse extends IResponse {
+export interface IEditCategoryChildrenOrderResponse extends IResponse {
     data: ICategoryData;
 }
 
