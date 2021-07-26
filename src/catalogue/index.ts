@@ -7,8 +7,8 @@ export * from './brand/request';
 export * from './brand/response';
 
 //Tax-Bracket
-export * from './taxBracket/request';
-export * from './taxBracket/response';
+export * from './taxSetting/request';
+export * from './taxSetting/response';
 
 //Product Request
 export * from './product/request';
