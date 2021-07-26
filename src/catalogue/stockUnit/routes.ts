@@ -1,12 +1,3 @@
-import { ICreateStockUnitRequest, IEditStockUnitRequest } from './request';
-import {
-    ICreateStockUnitResponse,
-    IDeleteStockUnitResponse,
-    IEditStockUnitResponse,
-    IGetAllStockUnitResponse,
-    IGetStockUnitResponse,
-} from './response';
-
 export enum STOCK_UNIT {
     /**
      * @method GET
@@ -19,11 +10,16 @@ export enum STOCK_UNIT {
      */
     GET_ALL = '/stockunits',
     /**
-     /**
-      * @method POST
-      * @type {ICreateStockUnitRequest} - requestBody
-      * @type {ICreateStockUnitResponse} - responseBody
-      */
+     * @method GET
+     * @type { ISearchResourceQueryParam } queryParams
+     * @type { ISearchStockUnitResponse } responseBody
+     */
+    SEARCH = '/stockunits/search',
+    /**
+     * @method POST
+     * @type {ICreateStockUnitRequest} - requestBody
+     * @type {ICreateStockUnitResponse} - responseBody
+     */
     CREATE = '/stockunits',
     /**
      * @method PUT

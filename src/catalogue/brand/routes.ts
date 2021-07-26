@@ -1,11 +1,3 @@
-import { ICreateBrandRequest, IEditBrandRequest } from './request';
-import {
-    ICreateBrandResponse,
-    IEditBrandResponse,
-    IGetAllBrandResponse,
-    IGetBrandResponse,
-} from './response';
-
 export enum BRAND {
     /**
      * @method GET
@@ -18,6 +10,12 @@ export enum BRAND {
      * @type { IGetAllBrandResponse } responseBody
      */
     GET_ALL = '/brands',
+    /**
+     * @method GET
+     * @type { ISearchResourceQueryParam } queryParams
+     * @type { ISearchBrandResponse } responseBody
+     */
+    SEARCH = '/brands/search',
     /**
      * @method POST
      * @type { ICreateBrandRequest } requestBody

@@ -9,6 +9,10 @@ export interface IGetAllBrandResponse extends IResponse {
     data: IBrandData[];
 }
 
+export interface ISearchBrandResponse extends IResponse {
+    data: IBrandData[];
+}
+
 export interface IGetBrandResponse extends IResponse {
     data: IBrandData;
 }
