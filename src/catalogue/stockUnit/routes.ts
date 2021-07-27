@@ -1,6 +1,7 @@
 export enum STOCK_UNIT {
     /**
      * @method GET
+     * @type { ICommonResourcePathParam } pathParams
      * @type {IGetStockUnitResponse} - responseBody
      */
     GET = '/stockunits/:id',
@@ -23,12 +24,14 @@ export enum STOCK_UNIT {
     CREATE = '/stockunits',
     /**
      * @method PUT
+     * @type { ICommonResourcePathParam } pathParams
      * @type {IEditStockUnitRequest} - requestBody
      * @type {IEditStockUnitResponse} - responseBody
      */
     EDIT = '/stockunits/:id',
     /**
      * @method DELETE
+     * @type { ICommonResourcePathParam } pathParams
      * @type {IDeleteStockUnitResponse} - responseBody
      */
     DELETE = '/stockunits/:id',
