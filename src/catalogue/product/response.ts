@@ -8,6 +8,7 @@ export interface IProductData {
     stockUnit?: {
         id: string;
         name: string;
+        unit: string;
     };
     brand?: {
         id: string;
