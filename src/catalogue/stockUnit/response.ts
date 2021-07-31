@@ -4,7 +4,7 @@ export interface IStockUnitData {
     id: string;
     name: string;
     unit: string;
-    isDefault: boolean;
+    isDefault?: boolean;
 }
 
 interface IStockUnitRespone extends IResponse {
