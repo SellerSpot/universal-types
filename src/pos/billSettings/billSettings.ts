@@ -35,10 +35,6 @@ export interface IBillA4Settings {
         show: boolean;
         data: string;
     };
-    footerMessage: {
-        show: boolean;
-        data: string;
-    };
     termsAndConditions: {
         show: boolean;
         data: string;
@@ -46,6 +42,10 @@ export interface IBillA4Settings {
     signature: {
         authorised: boolean;
         customer: boolean;
+    };
+    footerMessage: {
+        show: boolean;
+        data: string;
     };
 }
 
