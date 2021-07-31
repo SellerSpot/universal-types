@@ -1,4 +1,4 @@
-export interface IProductRequest {
+interface IProductRequest {
     name: string;
     barcode?: string;
     description?: string;
@@ -7,4 +7,6 @@ export interface IProductRequest {
     stockUnit?: string;
 }
 
-export type IEditProductRequest = Partial<IProductRequest>;
+export type IEditProductRequest = IProductRequest;
+
+export type ICreateProductRequest = IProductRequest;

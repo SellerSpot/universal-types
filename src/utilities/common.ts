@@ -10,3 +10,7 @@ export type ArgumentsType<T extends (...args: any[]) => any> = T extends (...arg
 export interface ICommonResourcePathParam {
     id: string;
 }
+
+export interface ISearchResourceQueryParam {
+    query: string;
+}

@@ -1,3 +1,7 @@
+export interface IProductSearchPathParam {
+    query: string;
+}
+
 export enum PRODUCT {
     /**
      * @method GET
@@ -7,25 +11,31 @@ export enum PRODUCT {
     /**
      * @method GET
      * @type { ICommonResourcePathParam } pathParams
-     * @type {IProductResponse} responseBody
+     * @type {IGetProductResponse} responseBody
      */
     GET = '/products/:id',
     /**
+     * @method GET
+     * @type {IProductSearchPathParam} pathParams
+     * @type {ISearchProductResponse} responseBody
+     */
+    SEARCH = '/products/:query',
+    /**
      * @method POST
-     * @type {IProductRequest} requestBody
-     * @type {IProductResponse} responseBody
+     * @type {ICreateProductRequest} requestBody
+     * @type {ICreateProductResponse} responseBody
      */
     CREATE = '/products',
     /**
+     * @method PUT
      * @type { ICommonResourcePathParam } pathParams
      * @type {IEditProductRequest} requestBody
-     * @type {IProductResponse} responseBody
-     * @method PUT
+     * @type {IEditProductResponse} responseBody
      */
     EDIT = '/products/:id',
     /**
-     * @type { ICommonResourcePathParam } pathParams
      * @method DELETE
+     * @type { ICommonResourcePathParam } pathParams
      */
     DELETE = '/products/:id',
 }

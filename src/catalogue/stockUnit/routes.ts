@@ -1,15 +1,7 @@
-import { ICreateStockUnitRequest, IEditStockUnitRequest } from './request';
-import {
-    ICreateStockUnitResponse,
-    IDeleteStockUnitResponse,
-    IEditStockUnitResponse,
-    IGetAllStockUnitResponse,
-    IGetStockUnitResponse,
-} from './response';
-
 export enum STOCK_UNIT {
     /**
      * @method GET
+     * @type { ICommonResourcePathParam } pathParams
      * @type {IGetStockUnitResponse} - responseBody
      */
     GET = '/stockunits/:id',
@@ -19,20 +11,27 @@ export enum STOCK_UNIT {
      */
     GET_ALL = '/stockunits',
     /**
-     /**
-      * @method POST
-      * @type {ICreateStockUnitRequest} - requestBody
-      * @type {ICreateStockUnitResponse} - responseBody
-      */
+     * @method GET
+     * @type { ISearchResourceQueryParam } queryParams
+     * @type { ISearchStockUnitResponse } responseBody
+     */
+    SEARCH = '/stockunits/search',
+    /**
+     * @method POST
+     * @type {ICreateStockUnitRequest} - requestBody
+     * @type {ICreateStockUnitResponse} - responseBody
+     */
     CREATE = '/stockunits',
     /**
      * @method PUT
+     * @type { ICommonResourcePathParam } pathParams
      * @type {IEditStockUnitRequest} - requestBody
      * @type {IEditStockUnitResponse} - responseBody
      */
     EDIT = '/stockunits/:id',
     /**
      * @method DELETE
+     * @type { ICommonResourcePathParam } pathParams
      * @type {IDeleteStockUnitResponse} - responseBody
      */
     DELETE = '/stockunits/:id',
