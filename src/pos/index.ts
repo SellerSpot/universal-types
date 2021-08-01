@@ -9,5 +9,5 @@ export * from './billSettings/billSettings';
 export * from './billSettings/billSizes';
 
 // new sale / sale history
-export * from './saleHistory/request';
-export * from './saleHistory/response';
+export * from './sales/request';
+export * from './sales/response';
