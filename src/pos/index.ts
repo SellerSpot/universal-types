@@ -1,7 +1,8 @@
-// inventory routes
+// inventory types
 export * from './inventory/request';
+export * from './inventory/response';
 
-// billSettings routes
+// billSettings types
 export * from './billSettings/request';
 export * from './billSettings/response';
 export * from './billSettings/billSettings';
