@@ -10,3 +10,6 @@ export * from './plugin/response';
 // storeCurreny
 export * from './storeCurrency/request';
 export * from './storeCurrency/response';
+
+// customer
+export * from './customer/customer';
