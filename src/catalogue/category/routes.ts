@@ -1,6 +1,4 @@
-export interface IEditChildrenOrderPathParam {
-    parentId: string;
-}
+import { IEditChildrenOrderPathParam } from './request';
 
 export enum CATEGORY {
     /**

@@ -7,6 +7,10 @@ interface IProductRequest {
     stockUnit?: string;
 }
 
+export interface IProductSearchPathParam {
+    query: string;
+}
+
 export type IEditProductRequest = IProductRequest;
 
 export type ICreateProductRequest = IProductRequest;

@@ -1,6 +1,11 @@
-export interface IProductSearchPathParam {
-    query: string;
-}
+import { ICommonResourcePathParam } from '../../utilities';
+import { ICreateProductRequest, IProductSearchPathParam } from './request';
+import {
+    ICreateProductResponse,
+    IGetAllProductResponse,
+    IGetProductResponse,
+    ISearchProductResponse,
+} from './response';
 
 export enum PRODUCT {
     /**
@@ -10,7 +15,7 @@ export enum PRODUCT {
     GET_ALL = '/products',
     /**
      * @method GET
-     * @type { ICommonResourcePathParam } pathParams
+     * @type {ICommonResourcePathParam} pathParams
      * @type {IGetProductResponse} responseBody
      */
     GET = '/products/:id',
@@ -35,7 +40,7 @@ export enum PRODUCT {
     EDIT = '/products/:id',
     /**
      * @method DELETE
-     * @type { ICommonResourcePathParam } pathParams
+     * @type {ICommonResourcePathParam} pathParams
      */
     DELETE = '/products/:id',
 }
