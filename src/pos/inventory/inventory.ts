@@ -2,6 +2,7 @@ import { IProductData, ITaxBracketData, ITaxGroupData } from '../..';
 import { IOutletData } from '../../catalogue/outlet/outlet';
 
 export interface IInventoryData {
+    id: string;
     product: IProductData;
     isActive: boolean;
     tags?: [string];

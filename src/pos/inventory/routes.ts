@@ -1,17 +1,23 @@
 export enum INVENTORY {
     /**
-     * Product addition to inventory. Specify **productId** (maps inventory details
-     * with existing product) or **product** (creates new product and maps inventory details)
+     * Product addition to inventory.
      * @method POST
+     * @type { IAddProductToInventoryRequest } requestBody
+     * @type { IAddProductToInventoryResponse } responseBody
      */
     CREATE = '/inventories',
-
     /**
      * list all products in inventory
      * @method GET
+     * @type { IGetAllInventoryProductResponse } responseBody
      */
     GET_ALL = '/inventories',
-
+    /**
+     * @method GET
+     * @type { ISearchResourceQueryParam } queryParams
+     * @type { ISearchInventoryProductsResponse } responseBody
+     */
+    SEARCH = '/inventories/search',
     /**
      * update product - inventory details
      * @method PUT

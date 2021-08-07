@@ -19,6 +19,7 @@ export enum ERROR_CODE {
     //Category
     CATEGORY_NOT_FOUND,
     CATEGORY_TITLE_INVALID,
+
     //Brand
     BRAND_NAME_INVALID,
     BRAND_NOT_FOUND,
@@ -31,6 +32,9 @@ export enum ERROR_CODE {
     //Stock Unit
     STOCK_UNIT_NAME_INVALID,
     STOCK_UNIT_NOT_FOUND,
+
+    //Outlet
+    OUTLET_INVALID_OUTLET,
 
     //Product
     PRODUCT_NOT_FOUND,

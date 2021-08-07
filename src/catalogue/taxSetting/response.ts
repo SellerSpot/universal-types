@@ -9,7 +9,6 @@ export interface ITaxBracketData {
 export interface ITaxGroupData {
     id: string;
     name: string;
-    rate: number;
     bracket: ITaxBracketData[];
 }
 
