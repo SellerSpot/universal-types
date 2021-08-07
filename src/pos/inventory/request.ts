@@ -1,4 +1,4 @@
-export interface ICreateInventoryRequest {
+export interface IAddProductToInventoryRequest {
     productId: string;
     tags?: string[];
     stock?: number;

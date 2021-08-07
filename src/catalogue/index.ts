@@ -17,3 +17,8 @@ export * from './product/response';
 //Stock Unit export
 export * from './stockUnit/request';
 export * from './stockUnit/response';
+
+//Outlet export
+export * from './outlet/outlet';
+export * from './outlet/request';
+export * from './outlet/response';

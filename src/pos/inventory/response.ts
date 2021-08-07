@@ -1,14 +1,10 @@
-import { IProductData, ITaxBracketData, ITaxGroupData } from '../..';
+import { IResponse } from '../../utilities';
+import { IInventoryData } from './inventory';
 
-export interface IInventoryData {
-    product: IProductData;
-    isActive: boolean;
-    tags?: [string];
-    stock: number;
-    isTrack: boolean;
-    markup?: number;
-    landingCost?: number;
-    maxRetailPrice?: number;
-    sellingPrice: number;
-    taxSetting?: ITaxBracketData | ITaxGroupData;
+export interface IGetAllInventoryProductResponse extends IResponse {
+    data: IInventoryData[];
+}
+
+export interface IAddProductToInventoryResponse extends IResponse {
+    data: IInventoryData;
 }

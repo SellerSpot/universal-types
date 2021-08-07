@@ -1,7 +1,7 @@
 // inventory types
-export * from './inventory/outlet';
 export * from './inventory/request';
 export * from './inventory/response';
+export * from './inventory/inventory';
 
 // billSettings types
 export * from './billSettings/request';
