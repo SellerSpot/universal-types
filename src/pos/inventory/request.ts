@@ -6,5 +6,5 @@ export interface IAddProductToInventoryRequest {
     markup?: number;
     landingCost?: number;
     sellingPrice: number;
-    taxBracketId?: string;
+    taxSettingId?: string;
 }
