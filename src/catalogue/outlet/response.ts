@@ -1,6 +1,6 @@
 import { IOutletData } from '..';
 import { IResponse } from '../../utilities';
 
-export interface IGetAllOutlet extends IResponse {
+export interface IGetAllOutletResponse extends IResponse {
     data: IOutletData[];
 }
