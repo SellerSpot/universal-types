@@ -4,6 +4,7 @@ export interface IAddProductToInventoryRequest {
     stock?: number;
     isTrack?: boolean;
     markup?: number;
+    mrp: number;
     landingCost?: number;
     sellingPrice: number;
     taxSettingId?: string;

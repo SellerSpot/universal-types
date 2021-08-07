@@ -9,7 +9,7 @@ export interface IInventoryData {
     isTrack: boolean;
     markup?: number;
     landingCost?: number;
-    mrp?: number;
+    mrp: number;
     sellingPrice: number;
     outlet: IOutletData;
     taxSetting?: ITaxBracketData | ITaxGroupData;
