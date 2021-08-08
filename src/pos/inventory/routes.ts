@@ -13,6 +13,13 @@ export enum INVENTORY {
      */
     GET_ALL = '/inventories',
     /**
+     * get specific product from inventory
+     * @method GET
+     * @type { ICommonResourcePathParam } pathParams
+     * @type { IGetInventoryProductResponse } responseBody
+     */
+    GET = '/inventories/:id',
+    /**
      * @method GET
      * @type { ISearchResourceQueryParam } queryParams
      * @type { ISearchInventoryProductsResponse } responseBody
