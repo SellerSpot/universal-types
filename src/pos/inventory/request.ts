@@ -4,6 +4,7 @@ interface IOutletConfiguration {
     isTrack?: boolean;
     markup?: number;
     mrp: number;
+    isActive?: boolean;
     landingCost?: number;
     sellingPrice: number;
     taxSettingId?: string;
