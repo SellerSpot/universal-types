@@ -3,7 +3,10 @@ import { IOutletData } from '../../catalogue/outlet/outlet';
 
 export interface IInventoryData {
     id: string;
-    product: IProductData;
+    product: {
+        name: string;
+        reference: IProductData;
+    };
     isActive: boolean;
     tags?: [string];
     stock: number;
