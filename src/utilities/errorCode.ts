@@ -35,6 +35,7 @@ export enum ERROR_CODE {
 
     //Outlet
     OUTLET_INVALID_OUTLET,
+    OUTLET_NAME_INVALID,
 
     //Product
     PRODUCT_NOT_FOUND,
