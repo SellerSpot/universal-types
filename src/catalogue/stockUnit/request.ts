@@ -1,6 +1,5 @@
-export interface ICreateStockUnitRequest {
-    name: string;
-    unit: string;
-}
+import { IStockUnitData } from './stockUnit';
 
-export type IEditStockUnitRequest = ICreateStockUnitRequest;
+export type ICreateStockUnitRequest = Pick<IStockUnitData, 'name' | 'unit'>;
+
+export type IEditStockUnitRequest = Pick<IStockUnitData, 'name' | 'unit'>;

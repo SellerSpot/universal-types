@@ -1,18 +1,14 @@
 import { IResponse } from '../../utilities';
 import { IInventoryData } from './inventory';
 
-export interface IGetAllInventoryProductResponse extends IResponse {
-    data: IInventoryData[];
+interface ISingleInventoryProductResponse extends IResponse {
+    data: IInventoryData;
 }
 
-export interface IGetInventoryProductResponse extends IResponse {
+interface IMultiInventoryProductResponse extends IResponse {
     data: IInventoryData[];
 }
-
-export interface IAddProductToInventoryResponse extends IResponse {
-    data: IInventoryData[];
-}
-
-export interface ISearchInventoryProductsResponse extends IResponse {
-    data: IInventoryData[];
-}
+export type IGetAllInventoryProductResponse = IMultiInventoryProductResponse;
+export type IGetInventoryProductResponse = ISingleInventoryProductResponse;
+export type IAddProductToInventoryResponse = IMultiInventoryProductResponse;
+export type ISearchInventoryProductsResponse = IMultiInventoryProductResponse;

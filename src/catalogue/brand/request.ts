@@ -1,7 +1,5 @@
-export interface ICreateBrandRequest {
-    name: string;
-}
+import { IBrandData } from './brand';
 
-export interface IEditBrandRequest {
-    name: string;
-}
+export type ICreateBrandRequest = Pick<IBrandData, 'name'>;
+
+export type IEditBrandRequest = Pick<IBrandData, 'name'>;

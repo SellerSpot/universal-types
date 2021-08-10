@@ -1,17 +1,7 @@
-interface IOutletConfiguration {
-    outletId: string;
-    stock?: number;
-    isTrack?: boolean;
-    markup?: number;
-    mrp: number;
-    isActive?: boolean;
-    landingCost?: number;
-    sellingPrice: number;
-    taxSettingId?: string;
-}
+import { IInventoryData } from './inventory';
 
-export interface IAddProductToInventoryRequest {
-    productId: string;
-    tags?: string[];
-    configurations: IOutletConfiguration[];
-}
+type IInventoryProductRequest = Omit<IInventoryData, 'id' | 'configurations'> & {
+    configurations: Array<Omit<IInventoryData['configurations'][0], 'id'>>;
+};
+
+export type IAddProductToInventoryRequest = IInventoryProductRequest;

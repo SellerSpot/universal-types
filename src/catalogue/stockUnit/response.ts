@@ -1,23 +1,17 @@
 import { IResponse } from '../../utilities';
+import { IStockUnitData } from './stockUnit';
 
-export interface IStockUnitData {
-    id: string;
-    name: string;
-    unit: string;
-    isDefault?: boolean;
-}
-
-interface IStockUnitRespone extends IResponse {
+interface ISingleStockUnitResponse extends IResponse {
     data: IStockUnitData;
 }
 
-interface IAllStockUnitRespone extends IResponse {
+interface IMultiStockUnitResponse extends IResponse {
     data: IStockUnitData[];
 }
 
-export type IGetAllStockUnitResponse = IAllStockUnitRespone;
-export type ISearchStockUnitResponse = IAllStockUnitRespone;
-export type IGetStockUnitResponse = IStockUnitRespone;
-export type ICreateStockUnitResponse = IStockUnitRespone;
-export type IEditStockUnitResponse = IStockUnitRespone;
-export type IDeleteStockUnitResponse = IStockUnitRespone;
+export type IGetAllStockUnitResponse = IMultiStockUnitResponse;
+export type ISearchStockUnitResponse = IMultiStockUnitResponse;
+export type IGetStockUnitResponse = ISingleStockUnitResponse;
+export type ICreateStockUnitResponse = ISingleStockUnitResponse;
+export type IEditStockUnitResponse = ISingleStockUnitResponse;
+export type IDeleteStockUnitResponse = ISingleStockUnitResponse;

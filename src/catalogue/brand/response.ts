@@ -1,30 +1,17 @@
 import { IResponse } from '../../utilities';
+import { IBrandData } from './brand';
 
-export interface IBrandData {
-    id: string;
-    name: string;
-}
-
-export interface IGetAllBrandResponse extends IResponse {
-    data: IBrandData[];
-}
-
-export interface ISearchBrandResponse extends IResponse {
-    data: IBrandData[];
-}
-
-export interface IGetBrandResponse extends IResponse {
+interface ISingleBrandResponse extends IResponse {
     data: IBrandData;
 }
 
-export interface ICreateBrandResponse extends IResponse {
+interface IMultiBrandResponse extends IResponse {
     data: IBrandData;
 }
 
-export interface IEditBrandResponse extends IResponse {
-    data: IBrandData;
-}
-
-export interface IDeleteBrandResponse extends IResponse {
-    data: IBrandData;
-}
+export type IGetAllBrandResponse = IMultiBrandResponse;
+export type ISearchBrandResponse = IMultiBrandResponse;
+export type IGetBrandResponse = ISingleBrandResponse;
+export type ICreateBrandResponse = ISingleBrandResponse;
+export type IEditBrandResponse = ISingleBrandResponse;
+export type IDeleteBrandResponse = ISingleBrandResponse;

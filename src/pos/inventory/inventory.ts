@@ -1,20 +1,19 @@
-import { IProductData, ITaxBracketData, ITaxGroupData } from '../..';
+import { IProductData } from '../..';
+import { ITaxSettingData } from '../../catalogue';
 import { IOutletData } from '../../catalogue/outlet/outlet';
 
-export interface IInventoryData {
-    id: string;
-    product: {
-        name: string;
-        reference: IProductData;
-    };
-    isActive: boolean;
-    tags?: [string];
+interface IInventoryDataDynamic {
+    id?: string;
+    outlet: string | IOutletData;
     stock: number;
+    isActive: boolean;
     isTrack: boolean;
-    markup?: number;
-    landingCost?: number;
+    markup: number;
     mrp: number;
+    landingCost: number;
     sellingPrice: number;
-    outlet: IOutletData;
-    taxSetting?: ITaxBracketData | ITaxGroupData;
+    taxSetting: string | ITaxSettingData;
 }
+export type IInventoryData = IProductData & {
+    configurations: IInventoryDataDynamic[];
+};
