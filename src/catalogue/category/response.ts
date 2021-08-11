@@ -2,7 +2,7 @@ import { IResponse } from '../../utilities';
 import { ICategoryData } from './category';
 
 interface ISingleCategoryResponse extends IResponse {
-    data: ICategoryData[];
+    data: ICategoryData;
 }
 
 interface IMultiCategoryResponse extends IResponse {

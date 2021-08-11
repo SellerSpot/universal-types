@@ -6,7 +6,7 @@ interface ISingleBrandResponse extends IResponse {
 }
 
 interface IMultiBrandResponse extends IResponse {
-    data: IBrandData;
+    data: IBrandData[];
 }
 
 export type IGetAllBrandResponse = IMultiBrandResponse;
