@@ -1,7 +1,8 @@
 import { IInventoryData } from './inventory';
 
-type IInventoryProductRequest = Omit<IInventoryData, 'id' | 'configurations'> & {
-    configurations: Array<Omit<IInventoryData['configurations'][0], 'id'>>;
+type IInventoryProductRequest = Omit<IInventoryData, 'id'> & {
+    productId: string;
 };
 
 export type IAddProductToInventoryRequest = IInventoryProductRequest;
+export type IEditProductInInventoryRequest = Omit<IInventoryProductRequest, 'tags'>;

@@ -9,6 +9,8 @@ interface IMultiInventoryProductResponse extends IResponse {
     data: IInventoryData[];
 }
 export type IGetAllInventoryProductResponse = IMultiInventoryProductResponse;
-export type IGetInventoryProductResponse = ISingleInventoryProductResponse;
+export type IGetProductInventoryProductResponse = ISingleInventoryProductResponse;
+export type IGetOutletInventoryProductResponse = IMultiInventoryProductResponse;
+export type IEditInventoryProductResponse = ISingleInventoryProductResponse;
 export type IAddProductToInventoryResponse = IMultiInventoryProductResponse;
 export type ISearchInventoryProductsResponse = IMultiInventoryProductResponse;

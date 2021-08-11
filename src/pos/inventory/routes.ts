@@ -13,27 +13,35 @@ export enum INVENTORY {
      */
     GET_ALL = '/inventories',
     /**
-     * get specific product from inventory
+     * list all products in inventory
      * @method GET
-     * @type { ICommonResourcePathParam } pathParams
-     * @type { IGetInventoryProductResponse } responseBody
+     * @type { IInventoryResourcePathParam } pathParams
+     * @type { IGetProductInventoryProductResponse } responseBody
      */
-    GET = '/inventories/:id',
+    GET_PRODUCT = '/inventories/product/:productid',
+    /**
+     * list all products in inventory
+     * @method GET
+     * @type { IInventoryResourcePathParam } pathParams
+     * @type { IGetOutletInventoryProductResponse } responseBody
+     */
+    GET_OUTLET = '/inventories/outlet/:outletid',
     /**
      * @method GET
+     * @type { IInventoryResourcePathParam } pathParams
      * @type { ISearchResourceQueryParam } queryParams
      * @type { ISearchInventoryProductsResponse } responseBody
      */
-    SEARCH = '/inventories/search',
+    SEARCH = '/inventories/search/:outletid?',
     /**
      * update product - inventory details
      * @method PUT
      */
-    EDIT = '/inventories/:id',
-
+    EDIT = '/inventories',
     /**
      * delete product from inventory
      * @method DELETE
+     * @type { IInventoryResourcePathParam } pathParams
      */
-    DELETE = '/inventories',
+    DELETE = '/inventories/:productid/:outletid?',
 }

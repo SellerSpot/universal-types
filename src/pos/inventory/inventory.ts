@@ -2,8 +2,7 @@ import { IProductData } from '../..';
 import { ITaxSettingData } from '../../catalogue';
 import { IOutletData } from '../../catalogue/outlet/outlet';
 
-interface IInventoryDataDynamic {
-    id?: string;
+export interface IInventoryDataDynamic {
     outlet: string | IOutletData;
     stock: number;
     isActive: boolean;
@@ -15,5 +14,25 @@ interface IInventoryDataDynamic {
     taxSetting: string | ITaxSettingData;
 }
 export type IInventoryData = IProductData & {
-    configurations: IInventoryDataDynamic[];
+    tags: string[];
+    configurations: {
+        [key: string]: IInventoryDataDynamic;
+    };
 };
+
+export interface IDeleteInventoryResourcePathParam {
+    productid: string;
+    outletid?: string;
+}
+
+export interface IInventoryResourcePathParam {
+    outletid?: string;
+}
+
+export interface IGetProductInventoryResourcePathParam {
+    productid?: string;
+}
+
+export interface IGetOutletInventoryResourcePathParam {
+    outletid?: string;
+}
