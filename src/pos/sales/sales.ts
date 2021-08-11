@@ -21,6 +21,24 @@ export enum EPaymentMethods {
     // might be DUE in next phase
 }
 
+export interface IDiscount {
+    discount: number;
+    discountType: EDiscountTypes;
+}
+
+export interface ITaxBracket {
+    name: string;
+    rate: number;
+    group?: [
+        {
+            name: string;
+            rate: number;
+            reference: string | ITaxSettingData;
+        },
+    ];
+    reference: string | ITaxSettingData;
+}
+
 export interface ICartDetails {
     product: {
         name: string;
@@ -32,47 +50,32 @@ export interface ICartDetails {
     };
     quantity: number;
     unitPrice: number; // should we need isModified flag?
-    productDiscount: {
-        discount: number;
-        discountType: EDiscountTypes;
-    };
-    taxBracket: {
-        name: string;
-        rate: number;
-        group?: [
-            {
-                name: string;
-                rate: number;
-                reference: string | ITaxSettingData;
-            },
-        ];
-        reference: string | ITaxSettingData;
-    };
+    productDiscount: IDiscount;
+    taxBracket: ITaxBracket;
+}
+
+export interface ISalePayment {
+    method: EPaymentMethods;
+    // all products discount and including total sale discount
+    totalDiscount: number;
+    // all products consolidated taxes
+    totalTax: number;
+    // total before applying tax and discount
+    subTotal: number;
+    // total after applying tax and discount
+    grandTotal: number;
+    // amount paid by the customer
+    amountPaid: number;
+    // balance given to the customer
+    balanceGiven: number;
+    // need to incorporate due schema here in next phase
 }
 
 export interface ISaleData {
     cart: ICartDetails[];
     status: ESaleStatus;
-    saleDiscount: {
-        discount: number;
-        discountType: EDiscountTypes;
-    };
-    payment: {
-        method: EPaymentMethods;
-        // all products discount and including total sale discount
-        totalDiscount: number;
-        // all products consolidated taxes
-        totalTax: number;
-        // total before applying tax and discount
-        subTotal: number;
-        // total after applying tax and discount
-        grandTotal: number;
-        // amount paid by the customer
-        amountPaid: number;
-        // balance given to the customer
-        balanceGiven: number;
-        // need to incorporate due schema here in next phase
-    };
+    saleDiscount: IDiscount;
+    payment: ISalePayment;
     // client / customer
     customer: {
         name: string;
