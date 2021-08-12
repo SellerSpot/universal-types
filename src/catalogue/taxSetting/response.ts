@@ -1,50 +1,38 @@
 import { IResponse } from '../../utilities';
-
-export interface ITaxBracketData {
-    id: string;
-    name: string;
-    rate: number;
-}
-
-export interface ITaxGroupData {
-    id: string;
-    name: string;
-    rate: number;
-    bracket: ITaxBracketData[];
-}
+import { ITaxBracketData, ITaxGroupData } from './taxSetting';
 
 export type ITaxSettingData = ITaxGroupData | ITaxBracketData;
 
-interface ITaxBracketResponse extends IResponse {
+interface ISingleTaxBracketResponse extends IResponse {
     data: ITaxBracketData;
 }
 
-interface ITaxGroupsResponse extends IResponse {
+interface IMultISingleTaxGroupResponse extends IResponse {
     data: ITaxGroupData[];
 }
 
-interface ITaxGroupResponse extends IResponse {
+interface ISingleTaxGroupResponse extends IResponse {
     data: ITaxGroupData;
 }
-interface ITaxBracketsResponse extends IResponse {
+interface IMultiTaxBracketResponse extends IResponse {
     data: ITaxBracketData[];
 }
 
 // tax bracket
-export type IGetAllTaxBracketResponse = ITaxBracketsResponse;
-export type ISearchTaxBracketResponse = ITaxBracketsResponse;
-export type IGetTaxBracketResponse = ITaxBracketResponse;
-export type ICreateTaxBracketResponse = ITaxBracketResponse;
-export type IEditTaxBracketResponse = ITaxBracketResponse;
-export type IDeleteTaxBracketResponse = ITaxBracketResponse;
+export type IGetAllTaxBracketResponse = IMultiTaxBracketResponse;
+export type ISearchTaxBracketResponse = IMultiTaxBracketResponse;
+export type IGetTaxBracketResponse = ISingleTaxBracketResponse;
+export type ICreateTaxBracketResponse = ISingleTaxBracketResponse;
+export type IEditTaxBracketResponse = ISingleTaxBracketResponse;
+export type IDeleteTaxBracketResponse = ISingleTaxBracketResponse;
 
 // tax group
-export type IGetAllTaxGroupResponse = ITaxGroupsResponse;
-export type ISearchTaxGroupResponse = ITaxGroupsResponse;
-export type IGetTaxGroupResponse = ITaxGroupResponse;
-export type ICreateTaxGroupResponse = ITaxGroupResponse;
-export type IEditTaxGroupResponse = ITaxGroupResponse;
-export type IDeleteTaxGroupResponse = ITaxGroupResponse;
+export type IGetAllTaxGroupResponse = IMultISingleTaxGroupResponse;
+export type ISearchTaxGroupResponse = IMultISingleTaxGroupResponse;
+export type IGetTaxGroupResponse = ISingleTaxGroupResponse;
+export type ICreateTaxGroupResponse = ISingleTaxGroupResponse;
+export type IEditTaxGroupResponse = ISingleTaxGroupResponse;
+export type IDeleteTaxGroupResponse = ISingleTaxGroupResponse;
 
 // tax setting
 export interface ISearchTaxSettingResponse extends IResponse {

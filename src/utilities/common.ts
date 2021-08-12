@@ -14,3 +14,10 @@ export interface ICommonResourcePathParam {
 export interface ISearchResourceQueryParam {
     query: string;
 }
+
+/**
+ * deep partial used to make the object properties partial up to the depth n
+ */
+export type DeepPartial<T> = {
+    [P in keyof T]?: DeepPartial<T[P]>;
+};

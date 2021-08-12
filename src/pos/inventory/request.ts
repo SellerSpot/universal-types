@@ -1,10 +1,8 @@
-export interface ICreateInventoryRequest {
+import { IInventoryData } from './inventory';
+
+type IInventoryProductRequest = Omit<IInventoryData, 'id'> & {
     productId: string;
-    tags?: string[];
-    stock?: number;
-    isTrack?: boolean;
-    markup?: number;
-    landingCost?: number;
-    sellingPrice: number;
-    taxBracketId?: string;
-}
+};
+
+export type IAddProductToInventoryRequest = IInventoryProductRequest;
+export type IEditProductInInventoryRequest = Omit<IInventoryProductRequest, 'tags'>;
