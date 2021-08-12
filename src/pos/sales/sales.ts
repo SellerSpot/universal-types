@@ -1,7 +1,6 @@
 import { IUserDetails } from '../../auth';
-import { IProductData, IStockUnitData, ITaxSettingData } from '../../catalogue';
+import { IOutletData, IProductData, IStockUnitData, ITaxSettingData } from '../../catalogue';
 import { ICustomerData } from '../../core';
-import { IOUtletData } from '..';
 
 export enum EDiscountTypes {
     VALUE = 'VALUE',
@@ -85,7 +84,7 @@ export interface ISaleData {
     };
     outlet: {
         name: string;
-        reference: string | IOUtletData;
+        reference: string | IOutletData;
     };
     id?: string;
     createdAt?: string;

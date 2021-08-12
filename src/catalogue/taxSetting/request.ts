@@ -1,12 +1,8 @@
-export interface ITaxBracketRequest {
-    name: string;
-    rate: number;
-}
+import { ITaxBracketData, ITaxGroupData } from './taxSetting';
 
-export interface ITaxGroupRequest {
-    name: string;
-    bracket: string[];
-}
+export type ITaxBracketRequest = Pick<ITaxBracketData, 'name' | 'rate'>;
+
+export type ITaxGroupRequest = Pick<ITaxGroupData, 'name' | 'bracket'>;
 
 // tax bracket
 export type ICreateTaxBracketRequest = ITaxBracketRequest;

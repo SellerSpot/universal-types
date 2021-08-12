@@ -3,3 +3,4 @@ export { CATEGORY } from './category/routes';
 export { PRODUCT } from './product/routes';
 export { STOCK_UNIT } from './stockUnit/routes';
 export { TAX_BRACKET } from './taxSetting/routes';
+export { OUTLET } from './outlet/routes';

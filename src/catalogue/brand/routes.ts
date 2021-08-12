@@ -7,7 +7,6 @@ export enum BRAND {
     GET = '/brands/:id',
     /**
      * @method GET
-     * @type { ICommonResourcePathParam } pathParams
      * @type { IGetAllBrandResponse } responseBody
      */
     GET_ALL = '/brands',

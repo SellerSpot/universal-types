@@ -1,12 +1,5 @@
-interface IProductRequest {
-    name: string;
-    barcode?: string;
-    description?: string;
-    brand?: string;
-    category?: string;
-    stockUnit?: string;
-}
+import { IProductData } from './product';
 
-export type IEditProductRequest = IProductRequest;
+export type IEditProductRequest = Omit<IProductData, 'id'>;
 
-export type ICreateProductRequest = IProductRequest;
+export type ICreateProductRequest = Omit<IProductData, 'id'>;

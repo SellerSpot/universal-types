@@ -19,7 +19,7 @@ export enum PRODUCT {
      * @type {IProductSearchPathParam} pathParams
      * @type {ISearchProductResponse} responseBody
      */
-    SEARCH = '/products/:query',
+    SEARCH = '/products/search',
     /**
      * @method POST
      * @type {ICreateProductRequest} requestBody
