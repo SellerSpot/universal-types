@@ -1,5 +1,5 @@
 import { IProductData } from './product';
 
-export type IEditProductRequest = IProductData;
+export type IEditProductRequest = Omit<IProductData, 'id'>;
 
-export type ICreateProductRequest = IProductData;
+export type ICreateProductRequest = Omit<IProductData, 'id'>;
