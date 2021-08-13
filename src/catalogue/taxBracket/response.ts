@@ -1,18 +1,16 @@
 import { IResponse } from '../../utilities';
-import { ITaxBracketData, ITaxGroupData } from './taxSetting';
-
-export type ITaxSettingData = ITaxGroupData | ITaxBracketData;
+import { ITaxBracketData } from './taxBracket';
 
 interface ISingleTaxBracketResponse extends IResponse {
     data: ITaxBracketData;
 }
 
 interface IMultISingleTaxGroupResponse extends IResponse {
-    data: ITaxGroupData[];
+    data: ITaxBracketData[];
 }
 
 interface ISingleTaxGroupResponse extends IResponse {
-    data: ITaxGroupData;
+    data: ITaxBracketData;
 }
 interface IMultiTaxBracketResponse extends IResponse {
     data: ITaxBracketData[];
@@ -34,7 +32,7 @@ export type ICreateTaxGroupResponse = ISingleTaxGroupResponse;
 export type IEditTaxGroupResponse = ISingleTaxGroupResponse;
 export type IDeleteTaxGroupResponse = ISingleTaxGroupResponse;
 
-// tax setting
-export interface ISearchTaxSettingResponse extends IResponse {
-    data: ITaxSettingData[];
+// all tax brackets // includes both group and bracket
+export interface ISearchAllTaxBracketsResponse extends IResponse {
+    data: ITaxBracketData[];
 }

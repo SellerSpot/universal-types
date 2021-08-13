@@ -1,5 +1,5 @@
 import { IUserDetails } from '../../auth';
-import { IOutletData, IProductData, IStockUnitData, ITaxSettingData } from '../../catalogue';
+import { IOutletData, IProductData, IStockUnitData, ITaxBracketData } from '../../catalogue';
 import { ICustomerData } from '../../core';
 
 export enum EDiscountTypes {
@@ -25,17 +25,11 @@ export interface IDiscount {
     discountType: EDiscountTypes;
 }
 
-export interface ITaxBracket {
+export interface ISaleTaxBracket {
     name: string;
     rate: number;
-    group?: [
-        {
-            name: string;
-            rate: number;
-            reference: string | ITaxSettingData;
-        },
-    ];
-    reference: string | ITaxSettingData;
+    group?: Omit<ISaleTaxBracket, 'group'>[];
+    reference: string | ITaxBracketData;
 }
 
 export interface ICartDetails {
@@ -50,7 +44,7 @@ export interface ICartDetails {
     quantity: number;
     unitPrice: number; // should we need isModified flag?
     productDiscount: IDiscount;
-    taxBracket: ITaxBracket;
+    taxBracket: ISaleTaxBracket;
 }
 
 export interface ISalePayment {

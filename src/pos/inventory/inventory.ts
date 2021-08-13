@@ -1,8 +1,8 @@
 import { IProductData } from '../..';
-import { ITaxSettingData } from '../../catalogue';
+import { ITaxBracketData } from '../../catalogue';
 import { IOutletData } from '../../catalogue/outlet/outlet';
 
-export interface IInventoryDataDynamic {
+export interface IInventoryOutletData {
     outlet: string | IOutletData;
     stock: number;
     isActive: boolean;
@@ -11,14 +11,17 @@ export interface IInventoryDataDynamic {
     mrp: number;
     landingCost: number;
     sellingPrice: number;
-    taxSetting: string | ITaxSettingData;
+    taxBracket: string | ITaxBracketData;
 }
-export type IInventoryData = IProductData & {
-    tags: string[];
-    configurations: {
-        [key: string]: IInventoryDataDynamic;
+
+export interface IInventoryData extends IProductData {
+    outlets: {
+        /**
+         * key is the outlet id
+         */
+        [key: string]: IInventoryOutletData;
     };
-};
+}
 
 export interface IDeleteInventoryResourcePathParam {
     productid: string;
