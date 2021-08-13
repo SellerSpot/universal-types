@@ -1,3 +1,4 @@
+import { IProductData } from '../..';
 import { IResponse } from '../../utilities';
 import { IInventoryData } from './inventory';
 
@@ -13,4 +14,17 @@ export type IGetProductInventoryProductResponse = ISingleInventoryProductRespons
 export type IGetOutletInventoryProductResponse = IMultiInventoryProductResponse;
 export type IEditInventoryProductResponse = ISingleInventoryProductResponse;
 export type IAddProductToInventoryResponse = IMultiInventoryProductResponse;
-export type ISearchInventoryProductsResponse = IMultiInventoryProductResponse;
+export interface ISearchInventoryProductsResponse extends IResponse {
+    data: {
+        products: {
+            // send both so that the api can show prods in inventory
+            // as well as prods that match but not in inventory
+            inventoryProducts?: IInventoryData[];
+            catalogueProducts?: IProductData[];
+        };
+        // used to indicate if there was a problem in
+        // getting the inventories for the search query
+        searchStatus: boolean;
+        error?: 'nonExistingProduct' | 'nonExistingInventory';
+    };
+}
