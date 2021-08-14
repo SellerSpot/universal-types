@@ -69,9 +69,18 @@ export interface ISalePayment {
     // need to incorporate due schema here in next phase
 }
 
+export interface ITaxSplitUp {
+    name: string;
+    rate: number;
+    taxableValue: number;
+    taxAmount: number;
+    cartItemsSerialNumber: number[];
+}
+
 export interface ISaleData {
     cart: ICartDetails[];
     status: ESaleStatus;
+    taxSplitUps: ITaxSplitUp[];
     saleDiscount: IDiscount;
     payment: ISalePayment;
     // client / customer
