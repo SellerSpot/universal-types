@@ -1,6 +1,7 @@
 import { IUserDetails } from '../../auth';
 import { IOutletData, IProductData, IStockUnitData, ITaxBracketData } from '../../catalogue';
 import { ICustomerData } from '../../core';
+import { EBILL_SIZES } from '../billSettings/billSizes';
 
 export enum EDiscountTypes {
     VALUE = 'VALUE',
@@ -77,12 +78,18 @@ export interface ITaxSplitUp {
     cartItemsSerialNumber: number[];
 }
 
+export interface ISaleBillSettings {
+    size: EBILL_SIZES;
+    remarkMessage?: string;
+}
+
 export interface ISaleData {
     cart: ICartDetails[];
     status: ESaleStatus;
     taxSplitUps: ITaxSplitUp[];
     saleDiscount: IDiscount;
     payment: ISalePayment;
+    billSettings: ISaleBillSettings;
     // client / customer
     customer: {
         name: string;
