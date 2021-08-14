@@ -93,6 +93,10 @@ export interface ISaleData {
     // client / customer
     customer: {
         name: string;
+        /**
+         * if previously existing customer, id reference will be attached, if no record found,
+         * reference will have the customer details, from which the new suer will be created
+         */
         reference: string | ICustomerData;
     };
     // employee / owner
