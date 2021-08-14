@@ -11,7 +11,7 @@ export enum ESaleStatus {
     PARKED = 'PARKED',
     COMPLETED = 'COMPLETED',
     VOIDED = 'VOIDED',
-    // should we need QUOTED
+    QUOTED = 'QUOTED',
 }
 
 export enum EPaymentMethods {
@@ -42,9 +42,14 @@ export interface ICartDetails {
         reference: string | IStockUnitData;
     };
     quantity: number;
-    unitPrice: number; // should we need isModified flag?
+    mrp: number;
+    landingCost: number;
+    sellingPrice: number; // should we need is modified flag
     productDiscount: IDiscount;
     taxBracket: ISaleTaxBracket;
+    totalDiscount: number;
+    totalTax: number;
+    grandTotal: number;
 }
 
 export interface ISalePayment {
