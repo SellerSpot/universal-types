@@ -6,6 +6,10 @@ export interface ICreateCategoryRequest {
     parentId?: string;
 }
 
+export interface IEditChildrenOrderPathParam {
+    parentId: string;
+}
+
 export interface IEditCategoryChildrenOrderRequest {
     childrenOrder: string[];
 }
