@@ -6,7 +6,7 @@ export interface IBillSettings {
         [EBILL_SIZES.BILL_90MM]: IBill90MMSettings;
         // make an entry here if adding new bill
     };
-    defaultBill: keyof typeof EBILL_SIZES;
+    defaultBill: EBILL_SIZES;
 }
 
 export interface IBillA4Settings {
@@ -55,7 +55,7 @@ export interface IBill90MMSettings {
         name: string;
         address: string;
     };
-    footerMessage: {
+    remarkMessage: {
         show: boolean;
         data: string;
     };

@@ -1,6 +1,7 @@
 import { IUserDetails } from '../../auth';
-import { IOutletData, IProductData, IStockUnitData, ITaxSettingData } from '../../catalogue';
+import { IOutletData, IProductData, IStockUnitData, ITaxBracketData } from '../../catalogue';
 import { ICustomerData } from '../../core';
+import { EBILL_SIZES } from '../billSettings/billSizes';
 
 export enum EDiscountTypes {
     VALUE = 'VALUE',
@@ -11,13 +12,25 @@ export enum ESaleStatus {
     PARKED = 'PARKED',
     COMPLETED = 'COMPLETED',
     VOIDED = 'VOIDED',
-    // should we need QUOTED
+    QUOTED = 'QUOTED',
 }
 
 export enum EPaymentMethods {
     CASH = 'CASH',
     CARD = 'CARD',
     // might be DUE in next phase
+}
+
+export interface IDiscount {
+    discount: number;
+    discountType: EDiscountTypes;
+}
+
+export interface ISaleTaxBracket {
+    name: string;
+    rate: number;
+    group?: Omit<ISaleTaxBracket, 'group'>[];
+    reference: string | ITaxBracketData;
 }
 
 export interface ICartDetails {
@@ -30,51 +43,60 @@ export interface ICartDetails {
         reference: string | IStockUnitData;
     };
     quantity: number;
-    unitPrice: number; // should we need isModified flag?
-    productDiscount: {
-        discount: number;
-        discountType: EDiscountTypes;
-    };
-    taxBracket: {
-        name: string;
-        rate: number;
-        group?: [
-            {
-                name: string;
-                rate: number;
-                reference: string | ITaxSettingData;
-            },
-        ];
-        reference: string | ITaxSettingData;
-    };
+    mrp: number;
+    landingCost: number;
+    sellingPrice: number; // should we need is modified flag
+    productDiscount: IDiscount;
+    taxBracket: ISaleTaxBracket;
+    totalDiscount: number;
+    totalTax: number;
+    grandTotal: number;
+}
+
+export interface ISalePayment {
+    method: EPaymentMethods;
+    // all products discount and including total sale discount
+    totalDiscount: number;
+    // all products consolidated taxes
+    totalTax: number;
+    // total before applying tax and discount
+    subTotal: number;
+    // total after applying tax and discount
+    grandTotal: number;
+    // amount paid by the customer
+    amountPaid: number;
+    // balance given to the customer
+    balanceGiven: number;
+    // need to incorporate due schema here in next phase
+}
+
+export interface ITaxSplitUp {
+    name: string;
+    rate: number;
+    taxableValue: number;
+    taxAmount: number;
+    cartItemsSerialNumber: number[];
+}
+
+export interface ISaleBillSettings {
+    size: EBILL_SIZES;
+    remarkMessage?: string;
 }
 
 export interface ISaleData {
     cart: ICartDetails[];
     status: ESaleStatus;
-    saleDiscount: {
-        discount: number;
-        discountType: EDiscountTypes;
-    };
-    payment: {
-        method: EPaymentMethods;
-        // all products discount and including total sale discount
-        totalDiscount: number;
-        // all products consolidated taxes
-        totalTax: number;
-        // total before applying tax and discount
-        subTotal: number;
-        // total after applying tax and discount
-        grandTotal: number;
-        // amount paid by the customer
-        amountPaid: number;
-        // balance given to the customer
-        balanceGiven: number;
-        // need to incorporate due schema here in next phase
-    };
+    taxSplitUps: ITaxSplitUp[];
+    saleDiscount: IDiscount;
+    payment: ISalePayment;
+    billSettings: ISaleBillSettings;
     // client / customer
     customer: {
         name: string;
+        /**
+         * if previously existing customer, id reference will be attached, if no record found,
+         * reference will have the customer details, from which the new suer will be created
+         */
         reference: string | ICustomerData;
     };
     // employee / owner

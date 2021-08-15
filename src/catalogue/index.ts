@@ -9,9 +9,9 @@ export * from './brand/response';
 export * from './brand/brand';
 
 //Tax-Bracket
-export * from './taxSetting/request';
-export * from './taxSetting/response';
-export * from './taxSetting/taxSetting';
+export * from './taxBracket/request';
+export * from './taxBracket/response';
+export * from './taxBracket/taxBracket';
 
 //Product Request
 export * from './product/request';
