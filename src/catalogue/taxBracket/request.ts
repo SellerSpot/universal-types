@@ -6,4 +6,4 @@ export type IEditTaxBracketRequest = Pick<ITaxBracketData, 'name' | 'rate'>;
 
 // tax group
 export type ICreateTaxGroupRequest = Pick<ITaxBracketData, 'name' | 'group'>;
-export type IEditTaxGroupRequest = Pick<ITaxBracketData, 'name' | 'group' | 'rate'>;
+export type IEditTaxGroupRequest = Pick<ITaxBracketData, 'name' | 'group'>;
