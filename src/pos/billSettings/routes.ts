@@ -1,6 +1,3 @@
-import { IUpdateBillSettingsRequest } from './request';
-import { IGetBillSettingsResponse, IUpdateBillSettingsResponse } from './response';
-
 export enum BILL_SETTINGS {
     /**
      * delete product from inventory

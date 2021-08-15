@@ -27,3 +27,8 @@ export * from './stockUnit/stockUnit';
 export * from './outlet/outlet';
 export * from './outlet/request';
 export * from './outlet/response';
+
+//Outlet Settings Info export
+export * from './outletSettings/outletSettings';
+export * from './outletSettings/request';
+export * from './outletSettings/response';
