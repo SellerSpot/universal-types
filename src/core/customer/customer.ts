@@ -1,8 +1,9 @@
 export interface ICustomerData {
     name: string;
-    email: string;
     mobile: number;
-    addresss: number;
+    email: string;
+    shippingAddress: number;
+    billingAddress: number;
     id?: string;
     createdAt?: string;
     updatedAt?: string;

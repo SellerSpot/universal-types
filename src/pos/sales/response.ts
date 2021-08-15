@@ -7,3 +7,11 @@ export interface IGetAllSalesHistoryResponse extends IResponse {
         // pagination might be added here in the future
     };
 }
+
+export interface ICreateNewSaleResponse extends IResponse {
+    data: ISaleData;
+}
+
+export interface IParkSaleResponse extends IResponse {
+    data: ISaleData;
+}

@@ -1,4 +1,4 @@
-//category export
+// category export
 export * from './category/request';
 export * from './category/response';
 export * from './category/category';
@@ -8,22 +8,27 @@ export * from './brand/request';
 export * from './brand/response';
 export * from './brand/brand';
 
-//Tax-Bracket
+// Tax-Bracket
 export * from './taxBracket/request';
 export * from './taxBracket/response';
 export * from './taxBracket/taxBracket';
 
-//Product Request
+// Product Request
 export * from './product/request';
 export * from './product/response';
 export * from './product/product';
 
-//Stock Unit export
+// Stock Unit export
 export * from './stockUnit/request';
 export * from './stockUnit/response';
 export * from './stockUnit/stockUnit';
 
-//Outlet export
+// Outlet export
 export * from './outlet/outlet';
 export * from './outlet/request';
 export * from './outlet/response';
+
+// customer export
+export * from './customer/customer';
+export * from './customer/request';
+export * from './customer/response';

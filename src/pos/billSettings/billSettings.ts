@@ -18,6 +18,12 @@ export interface IBillA4Settings {
         show: boolean;
         data: string;
     };
+    taxInvoiceSection: {
+        show: boolean;
+        GSTNumber: boolean;
+        shippingAddress: boolean;
+        billingAddress: boolean;
+    };
     purchaseInvoiceSection: {
         show: boolean;
         discountColumn: boolean;

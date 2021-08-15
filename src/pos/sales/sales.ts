@@ -1,5 +1,11 @@
 import { IUserDetails } from '../../auth';
-import { IOutletData, IProductData, IStockUnitData, ITaxBracketData } from '../../catalogue';
+import {
+    IOutletData,
+    IProductData,
+    IStockUnitData,
+    ITaxBracketData,
+    ITenantCustomerData,
+} from '../../catalogue';
 import { ICustomerData } from '../../core';
 import { EBILL_SIZES } from '../billSettings/billSizes';
 
@@ -83,6 +89,11 @@ export interface ISaleBillSettings {
     remarkMessage?: string;
 }
 
+export interface ISaleCustomerData extends Partial<Omit<ITenantCustomerData, 'id'>> {
+    isAnonymous?: boolean;
+    reference?: string | ITenantCustomerData;
+}
+
 export interface ISaleData {
     cart: ICartDetails[];
     status: ESaleStatus;
@@ -91,14 +102,7 @@ export interface ISaleData {
     payment: ISalePayment;
     billSettings: ISaleBillSettings;
     // client / customer
-    customer: {
-        name: string;
-        /**
-         * if previously existing customer, id reference will be attached, if no record found,
-         * reference will have the customer details, from which the new suer will be created
-         */
-        reference: string | ICustomerData;
-    };
+    customer: ISaleCustomerData;
     // employee / owner
     user: {
         name: string;
