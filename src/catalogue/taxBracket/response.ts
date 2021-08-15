@@ -5,13 +5,6 @@ interface ISingleTaxBracketResponse extends IResponse {
     data: ITaxBracketData;
 }
 
-interface IMultISingleTaxGroupResponse extends IResponse {
-    data: ITaxBracketData[];
-}
-
-interface ISingleTaxGroupResponse extends IResponse {
-    data: ITaxBracketData;
-}
 interface IMultiTaxBracketResponse extends IResponse {
     data: ITaxBracketData[];
 }
@@ -25,14 +18,13 @@ export type IEditTaxBracketResponse = ISingleTaxBracketResponse;
 export type IDeleteTaxBracketResponse = ISingleTaxBracketResponse;
 
 // tax group
-export type IGetAllTaxGroupResponse = IMultISingleTaxGroupResponse;
-export type ISearchTaxGroupResponse = IMultISingleTaxGroupResponse;
-export type IGetTaxGroupResponse = ISingleTaxGroupResponse;
-export type ICreateTaxGroupResponse = ISingleTaxGroupResponse;
-export type IEditTaxGroupResponse = ISingleTaxGroupResponse;
-export type IDeleteTaxGroupResponse = ISingleTaxGroupResponse;
+export type IGetAllTaxGroupResponse = IMultiTaxBracketResponse;
+export type ISearchTaxGroupResponse = IMultiTaxBracketResponse;
+export type IGetTaxGroupResponse = ISingleTaxBracketResponse;
+export type ICreateTaxGroupResponse = ISingleTaxBracketResponse;
+export type IEditTaxGroupResponse = ISingleTaxBracketResponse;
+export type IDeleteTaxGroupResponse = ISingleTaxBracketResponse;
 
 // all tax brackets // includes both group and bracket
-export interface ISearchAllTaxBracketsResponse extends IResponse {
-    data: ITaxBracketData[];
-}
+export type ISearchAllBracketAndGroupResponse = IMultiTaxBracketResponse;
+export type IGetAllBracketAndGroupResponse = IMultiTaxBracketResponse;
