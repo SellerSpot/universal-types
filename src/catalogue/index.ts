@@ -32,3 +32,8 @@ export * from './outlet/response';
 export * from './customer/customer';
 export * from './customer/request';
 export * from './customer/response';
+
+//Outlet Settings Info export
+export * from './outletSettings/outletSettings';
+export * from './outletSettings/request';
+export * from './outletSettings/response';
