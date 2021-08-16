@@ -5,4 +5,4 @@ type IInventoryProductRequest = Omit<IInventoryData, 'id'> & {
 };
 
 export type IAddProductToInventoryRequest = IInventoryProductRequest;
-export type IEditProductInInventoryRequest = Omit<IInventoryProductRequest, 'tags'>;
+export type IEditProductInInventoryRequest = IInventoryProductRequest;

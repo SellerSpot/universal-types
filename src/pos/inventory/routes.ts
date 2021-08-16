@@ -1,3 +1,7 @@
+import { ISearchResourceQueryParam } from '../../utilities';
+import { IInventoryResourcePathParam } from './inventory';
+import { IGetOutletInventoryProductResponse, ISearchInventoryProductsResponse } from './response';
+
 export enum INVENTORY {
     /**
      * Product addition to inventory.
