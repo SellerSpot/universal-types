@@ -1,40 +1,40 @@
-import { ISearchResourceQueryParam } from '../../utilities';
 import { IInventoryResourcePathParam } from './inventory';
+import { ISearchInventoryQueryParam } from './request';
 import { IGetOutletInventoryProductResponse, ISearchInventoryProductsResponse } from './response';
 
 export enum INVENTORY {
     /**
      * Product addition to inventory.
      * @method POST
-     * @type { IAddProductToInventoryRequest } requestBody
-     * @type { IAddProductToInventoryResponse } responseBody
+     * @type {IAddProductToInventoryRequest} requestBody
+     * @type {IAddProductToInventoryResponse} responseBody
      */
     CREATE = '/inventories',
     /**
      * list all products in inventory
      * @method GET
-     * @type { IGetAllInventoryProductResponse } responseBody
+     * @type {IGetAllInventoryProductResponse} responseBody
      */
     GET_ALL = '/inventories',
     /**
      * list all products in inventory
      * @method GET
-     * @type { IInventoryResourcePathParam } pathParams
-     * @type { IGetProductInventoryProductResponse } responseBody
+     * @type {IInventoryResourcePathParam} pathParams
+     * @type {IGetProductInventoryProductResponse} responseBody
      */
     GET_PRODUCT = '/inventories/product/:productid',
     /**
      * list all products in inventory
      * @method GET
-     * @type { IInventoryResourcePathParam } pathParams
-     * @type { IGetOutletInventoryProductResponse } responseBody
+     * @type {IInventoryResourcePathParam} pathParams
+     * @type {IGetOutletInventoryProductResponse} responseBody
      */
     GET_OUTLET = '/inventories/outlet/:outletid',
     /**
      * @method GET
-     * @type { IInventoryResourcePathParam } pathParams
-     * @type { ISearchResourceQueryParam } queryParams
-     * @type { ISearchInventoryProductsResponse } responseBody
+     * @type {IInventoryResourcePathParam} pathParams
+     * @type {ISearchInventoryQueryParam} queryParams
+     * @type {ISearchInventoryProductsResponse} responseBody
      */
     SEARCH = '/inventories/search/:outletid?',
     /**
@@ -45,7 +45,7 @@ export enum INVENTORY {
     /**
      * delete product from inventory
      * @method DELETE
-     * @type { IInventoryResourcePathParam } pathParams
+     * @type {IInventoryResourcePathParam} pathParams
      */
     DELETE = '/inventories/:productid/:outletid?',
 }
