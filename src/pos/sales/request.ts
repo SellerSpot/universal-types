@@ -12,3 +12,16 @@ export interface ICreateNewSaleRequest {
 export interface IParkSaleRequest {
     payload?: ISaleData;
 }
+export interface IRetrieveSalePathParams {
+    /**
+     *  sale id
+     */
+    id?: string;
+}
+
+export interface IDeleteParkedSalePathParams {
+    /**
+     *  sale id
+     */
+    id?: string;
+}
