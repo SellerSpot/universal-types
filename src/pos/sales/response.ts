@@ -19,6 +19,10 @@ export interface IRetrieveSaleResponse extends IResponse {
     data: ISaleData;
 }
 
+export interface IVoidSaleResponse extends IResponse {
+    data: ISaleData;
+}
+
 export interface IDeleteParkedSaleResponse extends IResponse {
     data: ISaleData;
 }

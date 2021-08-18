@@ -4,6 +4,7 @@ import {
     IGetAllSalesHistoryQueryParams,
     IParkSaleRequest,
     IRetrieveSalePathParams,
+    IVoidSalePathParams,
 } from './request';
 import {
     ICreateNewSaleResponse,
@@ -11,6 +12,7 @@ import {
     IGetAllSalesHistoryResponse,
     IParkSaleResponse,
     IRetrieveSaleResponse,
+    IVoidSaleResponse,
 } from './response';
 
 export enum SALES {
@@ -49,4 +51,11 @@ export enum SALES {
      * @type {IRetrieveSaleResponse} - responseBody
      */
     RETRIEVE_SALE = '/sales/retrieve/:id',
+    /**
+     * Park a sale by passing the saleData payload
+     * @method PUT
+     * @type {IVoidSalePathParams} - pathParams
+     * @type {IVoidSaleResponse} - responseBody
+     */
+    VOID_SALE = '/sales/void/:id',
 }

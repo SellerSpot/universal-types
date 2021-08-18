@@ -25,3 +25,10 @@ export interface IDeleteParkedSalePathParams {
      */
     id?: string;
 }
+
+export interface IVoidSalePathParams {
+    /**
+     *  sale id
+     */
+    id?: string;
+}
