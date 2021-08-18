@@ -1,6 +1,14 @@
+import { IAddProductToInventoryRequest, IEditProductInInventoryRequest } from './request';
+import {
+    IAddProductToInventoryResponse,
+    IEditProductInInventoryResponse,
+    IGetAllInventoryProductResponse,
+    IGetInventoryByOutletIdResponse,
+    ISearchInventoryProductsResponse,
+} from './response';
+import { ISearchResourceQueryParam } from './../../utilities/common';
 import { IInventoryResourcePathParam } from './inventory';
 import { ISearchInventoryQueryParam } from './request';
-import { IGetOutletInventoryProductResponse, ISearchInventoryProductsResponse } from './response';
 
 export enum INVENTORY {
     /**
@@ -17,19 +25,19 @@ export enum INVENTORY {
      */
     GET_ALL = '/inventories',
     /**
-     * list all products in inventory
+     * get inventory based on product id
      * @method GET
-     * @type {IInventoryResourcePathParam} pathParams
-     * @type {IGetProductInventoryProductResponse} responseBody
+     * @type { IInventoryResourcePathParam } pathParams
+     * @type { IGetInventoryByProductIdResponse } responseBody
      */
-    GET_PRODUCT = '/inventories/product/:productid',
+    GET_BY_PRODUCT_ID = '/inventories/product/:productid',
     /**
-     * list all products in inventory
+     * get inventory based on outlet id
      * @method GET
-     * @type {IInventoryResourcePathParam} pathParams
-     * @type {IGetOutletInventoryProductResponse} responseBody
+     * @type { IInventoryResourcePathParam } pathParams
+     * @type { IGetInventoryByOutletIdResponse } responseBody
      */
-    GET_OUTLET = '/inventories/outlet/:outletid',
+    GET_BY_OUTLET_ID = '/inventories/outlet/:outletid',
     /**
      * @method GET
      * @type {IInventoryResourcePathParam} pathParams
@@ -40,6 +48,8 @@ export enum INVENTORY {
     /**
      * update product - inventory details
      * @method PUT
+     * @type { IEditProductInInventoryRequest } requestBody
+     * @type { IEditInventoryProductResponse } responseBody
      */
     EDIT = '/inventories',
     /**

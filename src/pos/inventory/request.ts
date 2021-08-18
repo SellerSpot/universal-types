@@ -1,8 +1,9 @@
 import { ISearchResourceQueryParam } from '../../utilities';
 import { IInventoryData } from './inventory';
 
-type IInventoryProductRequest = Omit<IInventoryData, 'id'> & {
+type IInventoryProductRequest = {
     productId: string;
+    outlets: Array<IInventoryData['outlets'][0]>;
 };
 
 export interface ISearchInventoryQueryParam extends ISearchResourceQueryParam {
