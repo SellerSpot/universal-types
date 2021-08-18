@@ -4,7 +4,7 @@ export interface ITaxBracketData {
     /**
      * incase of group it contains, the total rate of the group
      */
-    rate: number;
+    rate?: number;
     /**
      * filled with with
      */

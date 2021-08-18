@@ -10,9 +10,9 @@ interface IMultiInventoryProductResponse extends IResponse {
     data: IInventoryData[];
 }
 export type IGetAllInventoryProductResponse = IMultiInventoryProductResponse;
-export type IGetProductInventoryProductResponse = ISingleInventoryProductResponse;
-export type IGetOutletInventoryProductResponse = IMultiInventoryProductResponse;
-export type IEditInventoryProductResponse = ISingleInventoryProductResponse;
+export type IGetInventoryByProductIdResponse = ISingleInventoryProductResponse;
+export type IGetInventoryByOutletIdResponse = IMultiInventoryProductResponse;
+export type IEditProductInInventoryResponse = ISingleInventoryProductResponse;
 export type IAddProductToInventoryResponse = IMultiInventoryProductResponse;
 export interface ISearchInventoryProductsResponse extends IResponse {
     data: {
